@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c3d2b058-b79c-497c-b6d3-f800d71c1f56" name="Default Changelist" comment="mod3">
+      <change afterPath="$PROJECT_DIR$/tiles/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tiles/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arenas/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/arenas/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arenas/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/arenas/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiles/tiles.go" beforeDir="false" afterPath="$PROJECT_DIR$/tiles/tiles.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiles/tiles_interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/tiles/tiles_interface.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" url="file:///usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1tey2en9Y6rpQVaofF8TLseME07" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable..is.expanded" value="true" />
+    <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/levelTest.go" />
+    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/levelTest.go" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/levels" />
+      <recent name="$PROJECT_DIR$/gameStats" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c3d2b058-b79c-497c-b6d3-f800d71c1f56" name="Default Changelist" comment="" />
+      <created>1623143643923</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623143643923</updated>
+    </task>
+    <task id="LOCAL-00001" summary="mod1">
+      <created>1623144820575</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1623144820577</updated>
+    </task>
+    <task id="LOCAL-00002" summary="mod2">
+      <created>1623145801736</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1623145801736</updated>
+    </task>
+    <task id="LOCAL-00003" summary="mod3">
+      <created>1623150153598</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1623150153598</updated>
+    </task>
+    <task id="LOCAL-00004" summary="mod3">
+      <created>1623151165409</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1623151165409</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/ALT/Software-Projekt" />
+      <path value="$PROJECT_DIR$/ALT/Software-ProjektTG" />
+      <path value="$PROJECT_DIR$/bombermanPython" />
+    </ignored-roots>
+    <MESSAGE value="mod1" />
+    <MESSAGE value="mod2" />
+    <MESSAGE value="mod3" />
+    <option name="LAST_COMMIT_MESSAGE" value="mod3" />
+  </component>
+</project>
