@@ -1,10 +1,10 @@
 package tiles
 
 import (
-	"../animations"
-	"../characters"
-	. "../constants"
 	"github.com/faiface/pixel"
+	"github.com/vonende/bombermen/animations"
+	"github.com/vonende/bombermen/characters"
+	. "github.com/vonende/bombermen/constants"
 	"time"
 )
 
@@ -167,7 +167,6 @@ func (it *bombe) GetPower() float64 {
 func (it *bombe) Owner() (bool, characters.Player) {
 	return (*it).owner != nil, (*it).owner
 }
-
 
 func (it *bombe) SetPower(newPower float64) {
 	(*it).power = newPower

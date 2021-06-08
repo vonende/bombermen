@@ -1,9 +1,9 @@
 package tiles
 
 import (
-	"../animations"
-	"../characters"
 	"github.com/faiface/pixel"
+	"github.com/vonende/bombermen/animations"
+	"github.com/vonende/bombermen/characters"
 	"time"
 )
 
@@ -14,7 +14,7 @@ import (
 
 	NewTile(constant uint8, pos pixel.Vec) *tile
 
-	*tile erfüllt das Interface Tile 
+	*tile erfüllt das Interface Tile
 */
 
 /*	Vor.: "constant" muss ein gültiger Bezeichner für ein Item sein
@@ -23,8 +23,8 @@ import (
 	*data erfüllt das Interface Item
 
 	NewItem(constant uint8, pos pixel.Vec) *item
-	
-	*item erfüllt das Interface Item 
+
+	*item erfüllt das Interface Item
 */
 
 /*	Vor.: -
@@ -32,8 +32,8 @@ import (
 	*bombe erfüllt das Interface Item
 
 	NewBomb(p characters.Player, pos pixel.Vec) *bombe
-	
-	*bombe erfüllt das Interface Bombe 
+
+	*bombe erfüllt das Interface Bombe
 */
 
 type Tile interface {
@@ -122,7 +122,7 @@ type Bombe interface {
 	 * 	geliefert.
 	 */
 	Owner() (bool, characters.Player)
-	
+
 	/*	Vor.: -
 	 * 	Eff.: Die Bombe hat nun den Wirkradius newPower
 	 */
