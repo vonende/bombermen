@@ -1,9 +1,9 @@
 package animations
 
 import (
-	. "../constants"
 	"github.com/faiface/pixel"
 	"github.com/faiface/pixel/pixelgl"
+	. "github.com/vonende/bombermen/constants"
 	"image/color"
 	"image/png"
 	"log"
