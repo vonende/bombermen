@@ -17,7 +17,7 @@ type gs struct {
 	anzPlayer     uint8
 	width, height int
 	ar            arenas.Arena
-	lv            level.Level
+	lv            levels.Level
 }
 
 func NewRandomGameStat(width, height int, anzPlayer uint8) *gs {
@@ -26,7 +26,7 @@ func NewRandomGameStat(width, height int, anzPlayer uint8) *gs {
 	return l
 }
 
-func NewGameStat(lv level.Level, anzPlayer uint8) *gs {
+func NewGameStat(lv levels.Level, anzPlayer uint8) *gs {
 	g := new(gs)
 	g.lv = lv
 	var w, h int
@@ -59,8 +59,8 @@ func (g *gs) setTilesAndItems(partPos [][2]int, itemList []int, tile int) {
 	rand.Seed(time.Now().UnixNano())
 	var nt tiles.Tile
 	var ni tiles.Item
-	var cParts [][2]int = make([][2]int, len(partPos))
-	var cItems []int = make([]int, len(itemList))
+	var cParts = make([][2]int, len(partPos))
+	var cItems = make([]int, len(itemList))
 	var index, x, y int
 	copy(cParts, partPos)
 	copy(cItems, itemList)
@@ -89,12 +89,12 @@ func (g *gs) setTilesAndItems(partPos [][2]int, itemList []int, tile int) {
 	}
 }
 
-func (l *gs) A() arenas.Arena {
-	return l.ar
+func (g *gs) A() arenas.Arena {
+	return g.ar
 }
 
-func (l *gs) DrawColumn(y int, win pixel.Target) {
-	for x, rowSlice := range (*l).tileMatrix[y] {
+func (g *gs) DrawColumn(y int, win pixel.Target) {
+	for x, rowSlice := range (*g).tileMatrix[y] {
 		if len(rowSlice) > 1 {
 			rowSlice[1].Draw(win)
 		} else if len(rowSlice) == 1 {
@@ -102,40 +102,40 @@ func (l *gs) DrawColumn(y int, win pixel.Target) {
 		}
 		for i, tileORitem := range rowSlice {
 			if !tileORitem.Ani().IsVisible() {
-				(*l).tileMatrix[y][x] = append(rowSlice[:i], rowSlice[i+1:]...)
+				(*g).tileMatrix[y][x] = append(rowSlice[:i], rowSlice[i+1:]...)
 			}
 		}
 	}
 }
 
-func (l *gs) IsTile(x, y int) bool {
-	if x >= l.width || x < 0 || y >= l.height || y < 0 {
+func (g *gs) IsTile(x, y int) bool {
+	if x >= g.width || x < 0 || y >= g.height || y < 0 {
 		return true
 	}
-	return (*l).freePos[y][x] == Undestroyable || (*l).freePos[y][x] == Destroyable
+	return (*g).freePos[y][x] == Undestroyable || (*g).freePos[y][x] == Destroyable
 }
 
-func (l *gs) IsDestroyableTile(x, y int) bool {
-	if x >= l.width || x < 0 || y >= l.height || y < 0 {
+func (g *gs) IsDestroyableTile(x, y int) bool {
+	if x >= g.width || x < 0 || y >= g.height || y < 0 {
 		return false
 	}
-	return (*l).freePos[y][x] == Destroyable
+	return (*g).freePos[y][x] == Destroyable
 }
 
-func (l *gs) IsUndestroyableTile(x, y int) bool {
-	if x >= l.width || x < 0 || y >= l.height || y < 0 {
+func (g *gs) IsUndestroyableTile(x, y int) bool {
+	if x >= g.width || x < 0 || y >= g.height || y < 0 {
 		return true
 	}
-	return (*l).freePos[y][x] == Undestroyable
+	return (*g).freePos[y][x] == Undestroyable
 }
 
-func (l *gs) GetPosOfNextTile(x, y int, dir pixel.Vec) (b bool, xx, yy int) {
+func (g *gs) GetPosOfNextTile(x, y int, dir pixel.Vec) (b bool, xx, yy int) {
 	if dir.X != 0 && dir.Y != 0 {
 		fmt.Println("Kein Gültiger Vektor übergeben.")
 		return false, -1, -1
 	} else {
 		for i := 1; i <= int(dir.Len()); i++ {
-			if (*l).IsTile(x+i*int(dir.X)/int(dir.Len()), y+i*int(dir.Y)/int(dir.Len())) {
+			if (*g).IsTile(x+i*int(dir.X)/int(dir.Len()), y+i*int(dir.Y)/int(dir.Len())) {
 				return true, x + i*int(dir.X)/int(dir.Len()), y + i*int(dir.Y)/int(dir.Len())
 			}
 		}
@@ -143,14 +143,14 @@ func (l *gs) GetPosOfNextTile(x, y int, dir pixel.Vec) (b bool, xx, yy int) {
 	return false, -1, -1
 }
 
-func (l *gs) CollectItem(x, y int) (typ uint8, b bool) {
-	if l.freePos[y][x] != Free {
+func (g *gs) CollectItem(x, y int) (typ uint8, b bool) {
+	if g.freePos[y][x] != Free {
 		return 0, false
 	}
-	if len(l.tileMatrix[y][x]) == 1 {
-		typ = l.tileMatrix[y][x][0].GetType()
+	if len(g.tileMatrix[y][x]) == 1 {
+		typ = g.tileMatrix[y][x][0].GetType()
 		b = true
-		l.tileMatrix[y][x] = l.tileMatrix[y][x][:0]
+		g.tileMatrix[y][x] = g.tileMatrix[y][x][:0]
 	} else {
 		typ = 0
 		b = false
@@ -158,35 +158,35 @@ func (l *gs) CollectItem(x, y int) (typ uint8, b bool) {
 	return typ, b
 }
 
-func (l *gs) RemoveTile(x, y int) {
-	if len((*l).tileMatrix[y][x]) == 2 {
-		(*l).tileMatrix[y][x][1].Ani().Die()
-		(*l).freePos[y][x] = Free
-	} else if len((*l).tileMatrix[y][x]) == 1 {
-		(*l).tileMatrix[y][x][0].Ani().Die()
-		(*l).freePos[y][x] = Free
+func (g *gs) RemoveTile(x, y int) {
+	if len((*g).tileMatrix[y][x]) == 2 {
+		(*g).tileMatrix[y][x][1].Ani().Die()
+		(*g).freePos[y][x] = Free
+	} else if len((*g).tileMatrix[y][x]) == 1 {
+		(*g).tileMatrix[y][x][0].Ani().Die()
+		(*g).freePos[y][x] = Free
 	}
 }
 
-func (l *gs) RemoveItems(x, y int, dir pixel.Vec) {
+func (g *gs) RemoveItems(x, y int, dir pixel.Vec) {
 	if dir.X != 0 && dir.Y != 0 {
 		fmt.Println("Kein Gültiger Vektor übergeben.")
 	} else {
 		for i := 1; i <= int(dir.Len()); i++ {
 			yy := y + i*int(dir.Y)/int(dir.Len())
 			xx := x + i*int(dir.X)/int(dir.Len())
-			if len((*l).tileMatrix[yy][xx]) == 1 {
-				if (*l).tileMatrix[yy][xx][0].GetType() != Exit {
-					(*l).tileMatrix[yy][xx][0].Ani().Die()
-					(*l).tileMatrix[yy][xx][0].Ani().Update()
+			if len((*g).tileMatrix[yy][xx]) == 1 {
+				if (*g).tileMatrix[yy][xx][0].GetType() != Exit {
+					(*g).tileMatrix[yy][xx][0].Ani().Die()
+					(*g).tileMatrix[yy][xx][0].Ani().Update()
 				}
 			}
 		}
 		if dir.Len() == 0 {
-			if len((*l).tileMatrix[y][x]) == 1 {
-				if (*l).tileMatrix[y][x][0].GetType() != Exit {
-					(*l).tileMatrix[y][x][0].Ani().Die()
-					(*l).tileMatrix[y][x][0].Ani().Update()
+			if len((*g).tileMatrix[y][x]) == 1 {
+				if (*g).tileMatrix[y][x][0].GetType() != Exit {
+					(*g).tileMatrix[y][x][0].Ani().Die()
+					(*g).tileMatrix[y][x][0].Ani().Update()
 				}
 			}
 		}
@@ -248,14 +248,14 @@ func newBlankLevel(typ, width, height int, anzPlayer uint8) *gs {
 	return l
 }
 
-func (l *gs) setRandomTilesAndItems(numberTiles int) {
+func (g *gs) setRandomTilesAndItems(numberTiles int) {
 	rand.Seed(time.Now().UnixNano())
-	width := (*l).width
-	height := (*l).height
+	width := (*g).width
+	height := (*g).height
 	var freeTiles [][2]int
 	for x := 0; x < width; x++ {
 		for y := 0; y < height; y++ {
-			if (*l).freePos[y][x] == Free {
+			if (*g).freePos[y][x] == Free {
 				freeTiles = append(freeTiles, [2]int{x, y})
 			}
 		}
@@ -269,27 +269,27 @@ func (l *gs) setRandomTilesAndItems(numberTiles int) {
 	var tile = Greenwall //120 + rand.Intn(19)
 	var nt tiles.Tile
 	var ni tiles.Item
-	for i < int(numberTiles/2) {
+	for i < numberTiles/2 {
 		index = rand.Intn(len(freeTiles))
 		x = freeTiles[index][0]
 		y = freeTiles[index][1]
 		t = 100 + rand.Intn(12)
-		ni = tiles.NewItem(uint8(t), l.ar.CoordToVec(x, y))
-		(*l).tileMatrix[y][x] = append((*l).tileMatrix[y][x], ni)
-		nt = tiles.NewTile(uint8(tile), l.ar.CoordToVec(x, y))
-		(*l).tileMatrix[y][x] = append((*l).tileMatrix[y][x], nt)
-		(*l).freePos[y][x] = Destroyable
+		ni = tiles.NewItem(uint8(t), g.ar.CoordToVec(x, y))
+		(*g).tileMatrix[y][x] = append((*g).tileMatrix[y][x], ni)
+		nt = tiles.NewTile(uint8(tile), g.ar.CoordToVec(x, y))
+		(*g).tileMatrix[y][x] = append((*g).tileMatrix[y][x], nt)
+		(*g).freePos[y][x] = Destroyable
 		freeTiles = append(freeTiles[:index], freeTiles[index+1:]...)
 		i++
 	}
 	i = 0
-	for i < numberTiles-int(numberTiles*3/4) {
+	for i < numberTiles-numberTiles*3/4 {
 		index = rand.Intn(len(freeTiles))
 		x = freeTiles[index][0]
 		y = freeTiles[index][1]
-		nt = tiles.NewTile(uint8(tile), l.ar.CoordToVec(x, y))
-		(*l).tileMatrix[y][x] = append((*l).tileMatrix[y][x], nt)
-		(*l).freePos[y][x] = Destroyable
+		nt = tiles.NewTile(uint8(tile), g.ar.CoordToVec(x, y))
+		(*g).tileMatrix[y][x] = append((*g).tileMatrix[y][x], nt)
+		(*g).freePos[y][x] = Destroyable
 		freeTiles = append(freeTiles[:index], freeTiles[index+1:]...)
 		i++
 	}
