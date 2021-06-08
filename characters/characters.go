@@ -1,16 +1,9 @@
 package characters
 
 import (
-	//	"image"
-	//"github.com/faiface/pixel"
-	//"image/png"
-	//"log"
-	//"os"
-	//"time"
-	"../animations"
-	. "../constants"
 	"github.com/faiface/pixel"
-	//	"golang.org/x/image/colornames"
+	"github.com/vonende/bombermen/animations"
+	. "github.com/vonende/bombermen/constants"
 )
 
 /*

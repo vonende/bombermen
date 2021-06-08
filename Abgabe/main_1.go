@@ -851,7 +851,7 @@ func deathSequence() {
 
 func setMonster() {
 	monster = monster[:0]
-	// Enemies from level
+	// Enemies from levels
 	for _, enemyType := range levelDef.GetLevelEnemies() {
 		monster = append(monster, characters.NewEnemy(uint8(enemyType)))
 	}
@@ -873,27 +873,27 @@ func setMonster() {
 func loadLevel(nr uint8) string {
 	switch nr {
 	case 1:
-		return "./level/stufe_1_level_1.txt"
+		return "./levels/stufe_1_level_1.txt"
 	case 2:
-		return "./level/stufe_1_level_2.txt"
+		return "./levels/stufe_1_level_2.txt"
 	case 3:
-		return "./level/stufe_1_level_3.txt"
+		return "./levels/stufe_1_level_3.txt"
 	case 4:
-		return "./level/stufe_2_level_1.txt"
+		return "./levels/stufe_2_level_1.txt"
 	case 5:
-		return "./level/stufe_2_level_2.txt"
+		return "./levels/stufe_2_level_2.txt"
 	case 6:
-		return "./level/stufe_2_level_3.txt"
+		return "./levels/stufe_2_level_3.txt"
 	case 7:
-		return "./level/stufe_3_level_1.txt"
+		return "./levels/stufe_3_level_1.txt"
 	case 8:
-		return "./level/stufe_3_level_2.txt"
+		return "./levels/stufe_3_level_2.txt"
 	case 9:
-		return "./level/stufe_3_level_3.txt"
+		return "./levels/stufe_3_level_3.txt"
 	case 10:
-		return "./level/stufe_3_level_Boss.txt"
+		return "./levels/stufe_3_level_Boss.txt"
 	}
-	return "./level/stufe_3_level_Boss.txt"
+	return "./levels/stufe_3_level_Boss.txt"
 }
 func sun() {
 	var levelCount uint8 = 1

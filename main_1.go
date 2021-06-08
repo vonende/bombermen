@@ -19,8 +19,8 @@ import (
 	"./animations"
 	"./characters"
 	. "./constants"
-	"./gameStat"
-	"./level"
+	"./gameStats"
+	"./levels"
 	"./sounds"
 	txt "./text"
 	"./tiles"
@@ -39,9 +39,9 @@ import (
 var bombs []tiles.Bombe
 var continu = true
 var tb titlebar.Titlebar
-var lv gameStat.GameStat
+var lv gameStats.GameStat
 var music sounds.Sound
-var levelDef level.Level
+var levelDef levels.Level
 var tempAniSlice [][]interface{} // [Animation][Matrix]
 var monster []characters.Enemy
 var wB characters.Player
@@ -851,7 +851,7 @@ func deathSequence() {
 
 func setMonster() {
 	monster = monster[:0]
-	// Enemies from level
+	// Enemies from levels
 	for _, enemyType := range levelDef.GetLevelEnemies() {
 		monster = append(monster, characters.NewEnemy(uint8(enemyType)))
 	}
@@ -873,31 +873,31 @@ func setMonster() {
 func loadLevel(nr uint8) string {
 	switch nr {
 	case 1:
-		return "./level/stufe_1_level_1.txt"
+		return "./levels/stufe_1_level_1.txt"
 	case 2:
-		return "./level/stufe_1_level_2.txt"
+		return "./levels/stufe_1_level_2.txt"
 	case 3:
-		return "./level/stufe_1_level_3.txt"
+		return "./levels/stufe_1_level_3.txt"
 	case 4:
-		return "./level/stufe_2_level_1.txt"
+		return "./levels/stufe_2_level_1.txt"
 	case 5:
-		return "./level/stufe_2_level_2.txt"
+		return "./levels/stufe_2_level_2.txt"
 	case 6:
-		return "./level/stufe_2_level_3.txt"
+		return "./levels/stufe_2_level_3.txt"
 	case 7:
-		return "./level/stufe_3_level_1.txt"
+		return "./levels/stufe_3_level_1.txt"
 	case 8:
-		return "./level/stufe_3_level_2.txt"
+		return "./levels/stufe_3_level_2.txt"
 	case 9:
-		return "./level/stufe_3_level_3.txt"
+		return "./levels/stufe_3_level_3.txt"
 	case 10:
-		return "./level/stufe_3_level_Boss.txt"
+		return "./levels/stufe_3_level_Boss.txt"
 	}
-	return "./level/stufe_3_level_Boss.txt"
+	return "./levels/stufe_3_level_Boss.txt"
 }
 func sun() {
 	var levelCount uint8 = 1
-	levelDef = level.NewLevel(loadLevel(levelCount))
+	levelDef = levels.NewLevel(loadLevel(levelCount))
 	pitchWidth, pitchHeight = levelDef.GetBounds()
 	var zoomFactor float64
 	if float64((pitchHeight+1)*TileSize+32)/float64((pitchWidth+3)*TileSize) > float64(MaxWinSizeY)/MaxWinSizeX {
@@ -930,7 +930,7 @@ func sun() {
 
 	fadeOut(win)
 
-	lv = gameStat.NewGameStat(levelDef, 1)
+	lv = gameStats.NewGameStat(levelDef, 1)
 
 	wB = characters.NewPlayer(WhiteBomberman)
 	wB.Ani().Show()
@@ -963,8 +963,8 @@ func sun() {
 			levelCount = 1
 			wB.Reset()
 		}
-		levelDef = level.NewLevel(loadLevel(levelCount))
-		lv = gameStat.NewGameStat(levelDef, 1)
+		levelDef = levels.NewLevel(loadLevel(levelCount))
+		lv = gameStats.NewGameStat(levelDef, 1)
 		pitchWidth, pitchHeight = levelDef.GetBounds()
 		if float64((pitchHeight+1)*TileSize+32)/float64((pitchWidth+3)*TileSize) > float64(MaxWinSizeY)/MaxWinSizeX {
 			zoomFactor = MaxWinSizeY / float64((pitchHeight+1)*TileSize+32)

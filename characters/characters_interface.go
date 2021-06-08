@@ -1,8 +1,8 @@
 package characters
 
 import (
-	"../animations"
 	"github.com/faiface/pixel"
+	"github.com/vonende/bombermen/animations"
 )
 
 /*

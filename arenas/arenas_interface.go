@@ -1,4 +1,4 @@
-package arena
+package arenas
 
 import (
 	"github.com/faiface/pixel"

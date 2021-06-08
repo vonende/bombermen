@@ -1,17 +1,18 @@
-package main
+package gameStats
 
 import (
-	"./animations"
-	. "./constants"
-	"./gameStat"
-	"./level"
+	"../animations"
 	"fmt"
 	"github.com/faiface/pixel"
 	"github.com/faiface/pixel/pixelgl"
+	. "github.com/vonende/bombermen/constants"
+	"github.com/vonende/bombermen/gameStats"
+	"github.com/vonende/bombermen/levels"
+	"testing"
 )
 
-func sun() {
-	levelDef := level.NewLevel("./levels/stufe_2_level_3.txt")
+func run() {
+	levelDef := levels.NewLevel("./levels/stufe_2_level_3.txt")
 	pitchWidth, pitchHeight := levelDef.GetBounds()
 	var zoomFactor float64
 	if float64((pitchHeight+1)*TileSize+32)/float64((pitchWidth+3)*TileSize) > float64(MaxWinSizeY)/MaxWinSizeX {
@@ -37,7 +38,7 @@ func sun() {
 
 	win.Update()
 
-	lv := gameStat.NewGameStat(levelDef, 1)
+	lv := gameStats.NewGameStat(levelDef, 1)
 
 	fmt.Println(lv.GetBounds())
 
@@ -81,6 +82,6 @@ func sun() {
 
 }
 
-func main() {
-	pixelgl.Run(sun)
+func TestMain(*testing.M) {
+	pixelgl.Run(run)
 }

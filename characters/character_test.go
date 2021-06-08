@@ -1,11 +1,11 @@
 package characters
 
 import (
-	. "../constants"
 	"fmt"
 	"github.com/faiface/pixel"
 	"github.com/faiface/pixel/pixelgl"
 	"github.com/faiface/pixel/text"
+	. "github.com/vonende/bombermen/constants"
 	"golang.org/x/image/font/basicfont"
 	"image/color"
 	"testing"

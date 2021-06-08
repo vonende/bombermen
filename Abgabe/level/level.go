@@ -65,7 +65,7 @@ func (sts *startstatus) statusFromFile(path string) {
 		return
 	}
 	var b []byte = make([]byte, 1)
-	var status []string = []string{"w", "h", "arena", "pos", "item", "enemy", "walltype", "music", "time"}
+	var status []string = []string{"w", "h", "arenas", "pos", "item", "enemy", "walltype", "music", "time"}
 	var n, i int
 	var save []byte
 	var err error
@@ -107,7 +107,7 @@ func (sts *startstatus) statusFromFile(path string) {
 			case "h":
 				sts.h, _ = strconv.Atoi(str)
 				save = save[:0]
-			case "arena":
+			case "arenas":
 				sts.arenaType, _ = strconv.Atoi(str)
 				save = save[:0]
 			case "pos":

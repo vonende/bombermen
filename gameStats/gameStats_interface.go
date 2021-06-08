@@ -1,17 +1,16 @@
-package gameStat
+package gameStats
 
 import ( //
-	"../arena"
-	//"../tiles"
 	"github.com/faiface/pixel"
+	"github.com/vonende/bombermen/arenas"
 )
 
-// Konstruktor für ein zufälliges GemeStat Objekt für ein Spielfeld mit den Maßen width*height und für eine Spielerzahl von "anzPlayer". 
+// Konstruktor für ein zufälliges GemeStat Objekt für ein Spielfeld mit den Maßen width*height und für eine Spielerzahl von "anzPlayer".
 // NewRandomGameStat (width, height int, anzPlayer uint8) *gs
 
-// Konstruktor für ein GameStat Objekt für ein Spielfeld, das durch das dem Kondtruktor übergebene level Objekt definiert ist. 
+// Konstruktor für ein GameStat Objekt für ein Spielfeld, das durch das dem Kondtruktor übergebene levels Objekt definiert ist.
 // Die Anzahl der Spieler wird mit anzPLayer festegelgt.
-// NewGameStat(lv level.Level, anzPlayer uint8) *gs
+// NewGameStat(lv levels.Level, anzPlayer uint8) *gs
 
 // gs erfüllt das Interface GameStat
 
@@ -19,7 +18,7 @@ type GameStat interface {
 
 	// Vor.: -
 	// Eff.: Liefert die zum GameStat bzw. Spielfeld gehörende Arena
-	A() arena.Arena
+	A() arenas.Arena
 
 	// Vor.: -
 	// Eff.: Wenn sich an der Stelle x,y im Spielfeld ein Item befindet,
@@ -34,35 +33,35 @@ type GameStat interface {
 
 	// Vor.: -
 	// Eff.: Die Positionskoordinaten (xx,yy) des nächsten Teils in Richtug dir
-	//       ausgehend von der aktuellen Position (x,y) ist geliefert, falls es ein solches 
+	//       ausgehend von der aktuellen Position (x,y) ist geliefert, falls es ein solches
 	//       gibt. In dem Fall wird true , xx , yy zurück gegeben. Falls es kein zerstörbarens
 	//       Teil gibt, wird false, -1 ,-1 zurück gegeben.
 	GetPosOfNextTile(x, y int, dir pixel.Vec) (b bool, xx, yy int)
 
 	// Vor.: -
-	// Eff.: true wird genau dann zurück gegeben, wenn sich an den übergebenen Koordinaten (x,y) 
+	// Eff.: true wird genau dann zurück gegeben, wenn sich an den übergebenen Koordinaten (x,y)
 	//       ein zerstörbares Teil befindet. Falls nicht wird false zurück gegeben.
 	IsDestroyableTile(x, y int) bool
 
 	// Vor.: -
-	// Eff.: true wird genau dann zurück gegeben, wenn sich an den übergebenen Koordinaten (x,y) 
+	// Eff.: true wird genau dann zurück gegeben, wenn sich an den übergebenen Koordinaten (x,y)
 	//       ein unzerstörbares Teil befindet. Falls nicht wird false zurück gegeben.
 	IsUndestroyableTile(x, y int) bool
 
 	// Vor.: -
-	// Eff.: true wird genau dann zurück gegeben, wenn sich an den übergebenen Koordinaten (x,y) 
+	// Eff.: true wird genau dann zurück gegeben, wenn sich an den übergebenen Koordinaten (x,y)
 	//       ein zerstörbares oder unzerstörbares Teil befindet. Falls nicht wird false zurück gegeben.
 	IsTile(x, y int) bool
 
 	// Vor.: eine Koordinate von dir muss 0 sein.
-	// Eff.: Falls dir der Nullvektor ist: Falls ein Item an den übergebenen Koordinaten lag, ist dieses nun zerstört und die 
+	// Eff.: Falls dir der Nullvektor ist: Falls ein Item an den übergebenen Koordinaten lag, ist dieses nun zerstört und die
 	//       entsprechnde Animation beginnt.
-	//		 Falls dir kein Nullvektor ist: Alle Items ausgehend in richtung dir werden zerstört, 
-	//		 falls sie weniger als | dir| von x,y entfernt liegen, ein Item auf x,y wird aber nicht zerstört. 
+	//		 Falls dir kein Nullvektor ist: Alle Items ausgehend in richtung dir werden zerstört,
+	//		 falls sie weniger als | dir| von x,y entfernt liegen, ein Item auf x,y wird aber nicht zerstört.
 	RemoveItems(x, y int, dir pixel.Vec)
 
 	// Vor.: -
-	// Eff.: Falls ein zerstörbares Teil an den übergebenen Koordinaten lag, ist dieses nun zerstört und die 
+	// Eff.: Falls ein zerstörbares Teil an den übergebenen Koordinaten lag, ist dieses nun zerstört und die
 	//       entsprechnde Animation beginnt.
 	RemoveTile(x, y int)
 
@@ -71,7 +70,7 @@ type GameStat interface {
 	GetBounds() (int, int)
 
 	// Vor.: -
-	// Eff.: Das Gamestat Objekt ist auf seinen Startzustand zurücg gesetzt: Wurden im verlaufe des Spiels 
+	// Eff.: Das Gamestat Objekt ist auf seinen Startzustand zurücg gesetzt: Wurden im verlaufe des Spiels
 	//       Items und Teile zerstört, sind diese wieder da. Die Items liegen aber nicht mehr an der selben Stelle.
-	Reset ()
+	Reset()
 }

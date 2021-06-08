@@ -1,12 +1,12 @@
-package gameStat
+package gameStats
 
 import (
-	"../arena"
-	. "../constants"
-	"../level"
-	"../tiles"
 	"fmt"
 	"github.com/faiface/pixel"
+	"github.com/vonende/bombermen/arenas"
+	. "github.com/vonende/bombermen/constants"
+	"github.com/vonende/bombermen/levels"
+	"github.com/vonende/bombermen/tiles"
 	"math/rand"
 	"time"
 )
@@ -16,7 +16,7 @@ type gs struct {
 	freePos       [][]uint8 // 0 frei, 1 undestTile, 2 destTile, 3 blocked
 	anzPlayer     uint8
 	width, height int
-	ar            arena.Arena
+	ar            arenas.Arena
 	lv            level.Level
 }
 
@@ -33,7 +33,7 @@ func NewGameStat(lv level.Level, anzPlayer uint8) *gs {
 	w, h = lv.GetBounds()
 	g.width = w
 	g.height = h
-	ar := arena.NewArena(lv.GetArenaType(), w, h)
+	ar := arenas.NewArena(lv.GetArenaType(), w, h)
 	g.ar = ar
 	for layer := 0; layer < g.height; layer++ {
 		g.tileMatrix = append(g.tileMatrix, make([][]tiles.Tile, g.width))
@@ -89,7 +89,7 @@ func (g *gs) setTilesAndItems(partPos [][2]int, itemList []int, tile int) {
 	}
 }
 
-func (l *gs) A() arena.Arena {
+func (l *gs) A() arenas.Arena {
 	return l.ar
 }
 
@@ -182,7 +182,7 @@ func (l *gs) RemoveItems(x, y int, dir pixel.Vec) {
 				}
 			}
 		}
-		if dir.Len()==0 {
+		if dir.Len() == 0 {
 			if len((*l).tileMatrix[y][x]) == 1 {
 				if (*l).tileMatrix[y][x][0].GetType() != Exit {
 					(*l).tileMatrix[y][x][0].Ani().Die()
@@ -210,7 +210,7 @@ func (g *gs) Reset() {
 }
 
 func newBlankLevel(typ, width, height int, anzPlayer uint8) *gs {
-	ar := arena.NewArena(typ, width, height)
+	ar := arenas.NewArena(typ, width, height)
 	l := new(gs)
 	(*l).width = ar.GetWidth()
 	(*l).height = ar.GetHeight()

@@ -1,9 +1,9 @@
-package arena
+package arenas
 
 import (
-	. "../constants"
 	"github.com/faiface/pixel"
 	"github.com/faiface/pixel/pixelgl"
+	. "github.com/vonende/bombermen/constants"
 	"image"
 	_ "image/png"
 	"log"
