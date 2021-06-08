@@ -41,8 +41,6 @@ github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZN
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.3.0 h1:TivCn/peBQ7UY8ooIcPgZFpTNSz0Q2U6UrFlUfqbe0Q=
 github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=
-github.com/vonende/bombermen v0.0.0-20210608112507-ac8f68e02a10 h1:Y+X5/Wr32CvMfwxLOSUcDpRkChHDbYBdwBUncw9JPxw=
-github.com/vonende/bombermen v0.0.0-20210608112507-ac8f68e02a10/go.mod h1:SQOInymdIaFQFKFKVpRz2S0KfdvBWwr9XzsElsHvf6Y=
 github.com/vonende/bombermen/animations v0.0.0-20210608112507-ac8f68e02a10 h1:wyd4DnEiYWrycGT8cfw8EPXA/mDUJdjT957aFAkopGk=
 github.com/vonende/bombermen/animations v0.0.0-20210608112507-ac8f68e02a10/go.mod h1:bOHG1hKExar4Rr8sYTtSxW1hVWEpnq8zHZ864QwR420=
 github.com/vonende/bombermen/constants v0.0.0-20210608093340-889b868c9b2a/go.mod h1:9+/v1cP/V7Mrc0REJ4iwhhE4fdGDXv0fbXvCrLXmMig=
