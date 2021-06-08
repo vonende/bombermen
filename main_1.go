@@ -24,7 +24,7 @@ import (
 	"./sounds"
 	txt "./text"
 	"./tiles"
-	"./titlebar"
+	"./titlebars"
 	"github.com/faiface/pixel"
 	"github.com/faiface/pixel/imdraw"
 	"github.com/faiface/pixel/pixelgl"
@@ -38,7 +38,7 @@ import (
 
 var bombs []tiles.Bombe
 var continu = true
-var tb titlebar.Titlebar
+var tb titlebars.Titlebar
 var lv gameStats.GameStat
 var music sounds.Sound
 var levelDef levels.Level
@@ -934,7 +934,7 @@ func sun() {
 
 	wB = characters.NewPlayer(WhiteBomberman)
 	wB.Ani().Show()
-	tb = titlebar.New((3 + uint16(pitchWidth)) * TileSize)
+	tb = titlebars.New((3 + uint16(pitchWidth)) * TileSize)
 	tb.SetMatrix(pixel.IM.Moved(pixel.V((3+float64(pitchWidth))*TileSize/2, (1+float64(pitchHeight))*TileSize+16)))
 	tb.SetLifePointers(wB.GetLifePointer())
 	tb.SetPointsPointer(wB.GetPointsPointer())

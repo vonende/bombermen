@@ -1,12 +1,11 @@
 package gameStats
 
 import (
-	"../animations"
 	"fmt"
 	"github.com/faiface/pixel"
 	"github.com/faiface/pixel/pixelgl"
+	"github.com/vonende/bombermen/animations"
 	. "github.com/vonende/bombermen/constants"
-	"github.com/vonende/bombermen/gameStats"
 	"github.com/vonende/bombermen/levels"
 	"testing"
 )
@@ -38,7 +37,7 @@ func run() {
 
 	win.Update()
 
-	lv := gameStats.NewGameStat(levelDef, 1)
+	lv := NewGameStat(levelDef, 1)
 
 	fmt.Println(lv.GetBounds())
 

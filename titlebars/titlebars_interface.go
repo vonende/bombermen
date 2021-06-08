@@ -1,4 +1,4 @@
-package titlebar
+package titlebars
 
 import (
 	"github.com/faiface/pixel"

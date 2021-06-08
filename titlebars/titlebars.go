@@ -1,12 +1,12 @@
-package titlebar
+package titlebars
 
 import (
-	"../animations"
-	. "../constants"
-	"../sounds"
 	"github.com/faiface/pixel"
 	"github.com/faiface/pixel/imdraw"
 	"github.com/faiface/pixel/pixelgl"
+	"github.com/vonende/bombermen/animations"
+	. "github.com/vonende/bombermen/constants"
+	"github.com/vonende/bombermen/sounds"
 	"image/color"
 	"sync"
 	"time"

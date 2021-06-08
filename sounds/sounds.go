@@ -1,11 +1,11 @@
 package sounds
 
 import (
-	. "../constants"
 	"github.com/faiface/beep"
 	"github.com/faiface/beep/effects"
 	"github.com/faiface/beep/speaker"
 	"github.com/faiface/beep/vorbis"
+	. "github.com/vonende/bombermen/constants"
 	"log"
 	"os"
 	"time"

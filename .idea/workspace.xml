@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c3d2b058-b79c-497c-b6d3-f800d71c1f56" name="Default Changelist" comment="mod3">
-      <change afterPath="$PROJECT_DIR$/tiles/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tiles/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arenas/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/arenas/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arenas/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/arenas/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tiles/tiles.go" beforeDir="false" afterPath="$PROJECT_DIR$/tiles/tiles.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tiles/tiles_interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/tiles/tiles_interface.go" afterDir="false" />
+    <list default="true" id="c3d2b058-b79c-497c-b6d3-f800d71c1f56" name="Default Changelist" comment="mod4">
+      <change afterPath="$PROJECT_DIR$/sounds/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sounds/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/text/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/text/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/titlebars/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animations/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/animations/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animations/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/animations/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameStats/gameStats_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/gameStats/gameStats_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameStats/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/gameStats/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameStats/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/gameStats/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_1.go" beforeDir="false" afterPath="$PROJECT_DIR$/main_1.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds/sounds.go" beforeDir="false" afterPath="$PROJECT_DIR$/sounds/sounds.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiles-test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tiles/tiles_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/titlebar/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/titlebars/README.MD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/titlebar/titlebar.go" beforeDir="false" afterPath="$PROJECT_DIR$/titlebars/titlebars.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/titlebar/titlebar_interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/titlebars/titlebars_interface.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/titlebar/titlebar_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/titlebars/titlebars_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +54,14 @@
     <property name="configurable..is.expanded" value="true" />
     <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/levelTest.go" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
     <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/levelTest.go" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tiles" />
       <recent name="$PROJECT_DIR$/levels" />
       <recent name="$PROJECT_DIR$/gameStats" />
     </key>
@@ -89,7 +103,21 @@
       <option name="project" value="LOCAL" />
       <updated>1623151165409</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="mod3">
+      <created>1623151242472</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1623151242472</updated>
+    </task>
+    <task id="LOCAL-00006" summary="mod4">
+      <created>1623151507060</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1623151507060</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +145,7 @@
     <MESSAGE value="mod1" />
     <MESSAGE value="mod2" />
     <MESSAGE value="mod3" />
-    <option name="LAST_COMMIT_MESSAGE" value="mod3" />
+    <MESSAGE value="mod4" />
+    <option name="LAST_COMMIT_MESSAGE" value="mod4" />
   </component>
 </project>
