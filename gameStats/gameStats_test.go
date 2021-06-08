@@ -11,7 +11,7 @@ import (
 )
 
 func run() {
-	levelDef := levels.NewLevel("./levels/stufe_2_level_3.txt")
+	levelDef := levels.NewLevel("../levels/stufe_2_level_3.txt")
 	pitchWidth, pitchHeight := levelDef.GetBounds()
 	var zoomFactor float64
 	if float64((pitchHeight+1)*TileSize+32)/float64((pitchWidth+3)*TileSize) > float64(MaxWinSizeY)/MaxWinSizeX {
