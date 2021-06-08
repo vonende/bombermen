@@ -1,4 +1,0 @@
-
-
-Bomben werden mit der Leertaste gelegt.
-Hat man das Herz-Item eingesammelt, kann man mit der Taste 'x' alle gelegten Bomben hochjagen.

@@ -2,24 +2,760 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3d2b058-b79c-497c-b6d3-f800d71c1f56" name="Default Changelist" comment="mod4">
-      <change afterPath="$PROJECT_DIR$/sounds/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sounds/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/text/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/text/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/titlebars/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animations/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/animations/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animations/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/animations/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameStats/gameStats_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/gameStats/gameStats_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameStats/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/gameStats/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameStats/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/gameStats/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_1.go" beforeDir="false" afterPath="$PROJECT_DIR$/main_1.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sounds/sounds.go" beforeDir="false" afterPath="$PROJECT_DIR$/sounds/sounds.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tiles-test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tiles/tiles_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/titlebar/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/titlebars/README.MD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/titlebar/titlebar.go" beforeDir="false" afterPath="$PROJECT_DIR$/titlebars/titlebars.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/titlebar/titlebar_interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/titlebars/titlebars_interface.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/titlebar/titlebar_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/titlebars/titlebars_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_4_SWP_Anforderungen.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/doc/04_4_SWP_Anforderungen.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/Bomberman_Lastenheft.odt" beforeDir="false" afterPath="$PROJECT_DIR$/doc/Bomberman_Lastenheft.odt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/Entwurf_UML_und_Begruendung.odt" beforeDir="false" afterPath="$PROJECT_DIR$/doc/Entwurf_UML_und_Begruendung.odt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/Entwurf_UML_und_Begruendung.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/doc/Entwurf_UML_und_Begruendung.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/Planung.dia" beforeDir="false" afterPath="$PROJECT_DIR$/doc/Planung.dia" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/Planung.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/Projektuebersicht.odt" beforeDir="false" afterPath="$PROJECT_DIR$/doc/Projektuebersicht.odt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/README.MD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/animations/README.MD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/animations/animation_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/animations/animations.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/animations/animations_interface.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/arena/arena.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/arena/arena_interface.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/arena/arena_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/bomberman_Anleitung.txt" beforeDir="false" afterPath="$PROJECT_DIR$/doc/bomberman_Anleitung.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/characters/README.MD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/characters/character_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/characters/characters.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/characters/characters_interface.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/colornames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/doc/colornames.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/constants/constants.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/gameStat-test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/gameStat/gameStat.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/gameStat/gameStat_interface.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/gamestats-test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/graphics/README.MD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/graphics/Screenshots/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/graphics/Screenshots/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/graphics/Screenshots/5102.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/graphics/Screenshots/5104.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/graphics/Screenshots/5105.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/graphics/Screenshots/gameOver.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/graphics/Screenshots/gameOverEnd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/graphics/Screenshots/gameOverGoOn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/graphics/Screenshots/intro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/graphics/Screenshots/super-bomberman-snes-05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/graphics/Screenshots/victory1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/graphics/Screenshots/victory2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/graphics/Sprites/13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/graphics/Sprites/59913.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/graphics/Sprites/index.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/graphics/animations.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/graphics/bomberman.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/graphics/characters.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/graphics/tiles.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/installationsanleitung.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/level-test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/level/13x11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/level/15x13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/level/15x15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/level/19x19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/level/Doku_os.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/level/level.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/level/level1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/level/level_interface.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/level/stufe_1_level_1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/level/stufe_1_level_2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/level/stufe_1_level_3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/level/stufe_2_level_1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/level/stufe_2_level_2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/level/stufe_2_level_3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/level/stufe_3_level_1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/level/stufe_3_level_2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/level/stufe_3_level_3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/level/stufe_3_level_Boss.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/levelTest.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/main_1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/main.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/main_1.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/5 Action Chiptunes By Juhani Junkala/INFO.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Ending.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Level 1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Level 2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Level 3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Title Screen.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Climb_Rope_Loop_00.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Collect_Point_00.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Collect_Point_01.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Collect_Point_02.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Craft_00.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Explosion_00.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Explosion_01.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Explosion_02.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Explosion_03.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Explosion_04.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Hero_Death_00.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Hit_00.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Hit_01.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Hit_02.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Hit_03.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Jingle_Achievement_00.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Jingle_Achievement_01.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Jingle_Lose_00.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Jingle_Lose_01.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Jingle_Win_00.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Jingle_Win_01.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Jump_00.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Jump_01.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Jump_02.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Jump_03.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Menu_Navigate_00.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Menu_Navigate_01.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Menu_Navigate_02.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Menu_Navigate_03.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Open_00.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Open_01.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Pickup_00.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Pickup_01.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Pickup_02.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Pickup_03.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Pickup_04.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Shoot_00.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Shoot_01.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Shoot_02.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-Bit Sound Library/Shoot_03.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Coin 1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Coin 2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Coin 3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Coin 4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Coin 5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Exit 1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Exit 2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Exit 3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Explosion 1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Explosion 2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Explosion 3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Explosion 4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Explosion 5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Fly 1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Fly 2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Fly 3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Hit 1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Hit 2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Hit 3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Hit 4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Hit 5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Hit 6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Jump 1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Jump 2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Jump 3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Jump 4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Noise Select 1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Noise Select 2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Noise Select 3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Powerup 1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Powerup 2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Powerup 3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Select 1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Select 2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Select 3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Select 4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Shoot 1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Shoot 2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Shoot 3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/SoundFXPack.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Talk 1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Talk 2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Talk 3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Talk 4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Wrong 1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Wrong 2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/8-bit Sound Effects Pack 001/Wrong 3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/JRPG OST (Rev 2)/01 - Opening.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/JRPG OST (Rev 2)/02 - BWV 1007 - Prelude.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/JRPG OST (Rev 2)/04 - Sanctuary.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/JRPG OST (Rev 2)/05 - Reunion.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/JRPG OST (Rev 2)/06 - Rebels Be.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/JRPG OST (Rev 2)/07 - Town.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/JRPG OST (Rev 2)/08 - Overworld.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/JRPG OST (Rev 2)/09 - Z 339 - Here the Deities approve.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/JRPG OST (Rev 2)/10 - The Empire.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/JRPG OST (Rev 2)/11 - Ostrich!.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/JRPG OST (Rev 2)/12 - Timeworn Pagoda.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/JRPG OST (Rev 2)/13 - Danger.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/JRPG OST (Rev 2)/14 - Barbarian King.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/JRPG OST (Rev 2)/15 - Dungeon.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/JRPG OST (Rev 2)/16 - Enter the Emperor.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/JRPG OST (Rev 2)/17 - Victory.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/JRPG OST (Rev 2)/18 - Nighttide Waltz.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/JRPG OST (Rev 2)/19 - Courtesan.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/JRPG OST (Rev 2)/20 - Game Over.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/JRPG OST (Rev 2)/21 - Fanfare.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/JRPG OST (Rev 2)/22 - A New Comrade.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/JRPG OST (Rev 2)/23 - Inn.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/JRPG OST (Rev 2)/24 - RV 610 - Fecit potentiam.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/JRPG OST (Rev 2)/25 - Finale.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/JRPG OST (Rev 2)/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/ObservingTheStar/ObservingTheStar.mmpz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/ObservingTheStar/ObservingTheStar.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/README.MD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Alien/sfx_deathscream_alien1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Alien/sfx_deathscream_alien2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Alien/sfx_deathscream_alien3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Alien/sfx_deathscream_alien4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Alien/sfx_deathscream_alien5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Alien/sfx_deathscream_alien6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Android/sfx_deathscream_android1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Android/sfx_deathscream_android2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Android/sfx_deathscream_android3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Android/sfx_deathscream_android4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Android/sfx_deathscream_android5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Android/sfx_deathscream_android6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Android/sfx_deathscream_android7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Android/sfx_deathscream_android8.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Human/sfx_deathscream_human1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Human/sfx_deathscream_human10.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Human/sfx_deathscream_human11.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Human/sfx_deathscream_human12.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Human/sfx_deathscream_human13.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Human/sfx_deathscream_human14.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Human/sfx_deathscream_human2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Human/sfx_deathscream_human3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Human/sfx_deathscream_human4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Human/sfx_deathscream_human5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Human/sfx_deathscream_human6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Human/sfx_deathscream_human7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Human/sfx_deathscream_human8.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Human/sfx_deathscream_human9.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Robot/sfx_deathscream_robot1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Robot/sfx_deathscream_robot2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Robot/sfx_deathscream_robot3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Death Screams/Robot/sfx_deathscream_robot4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Clusters/sfx_exp_cluster1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Clusters/sfx_exp_cluster10.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Clusters/sfx_exp_cluster11.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Clusters/sfx_exp_cluster2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Clusters/sfx_exp_cluster3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Clusters/sfx_exp_cluster4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Clusters/sfx_exp_cluster5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Clusters/sfx_exp_cluster6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Clusters/sfx_exp_cluster7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Clusters/sfx_exp_cluster8.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Clusters/sfx_exp_cluster9.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Double/sfx_exp_double1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Double/sfx_exp_double2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Double/sfx_exp_double3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Long/sfx_exp_long1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Long/sfx_exp_long2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Long/sfx_exp_long3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Long/sfx_exp_long4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Long/sfx_exp_long5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Long/sfx_exp_long6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Medium Length/sfx_exp_medium1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Medium Length/sfx_exp_medium10.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Medium Length/sfx_exp_medium11.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Medium Length/sfx_exp_medium12.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Medium Length/sfx_exp_medium13.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Medium Length/sfx_exp_medium2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Medium Length/sfx_exp_medium3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Medium Length/sfx_exp_medium4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Medium Length/sfx_exp_medium5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Medium Length/sfx_exp_medium6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Medium Length/sfx_exp_medium7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Medium Length/sfx_exp_medium8.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Medium Length/sfx_exp_medium9.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Odd/sfx_exp_odd1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Odd/sfx_exp_odd2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Odd/sfx_exp_odd3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Odd/sfx_exp_odd4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Odd/sfx_exp_odd5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Odd/sfx_exp_odd6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Odd/sfx_exp_odd7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_hard1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_hard10.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_hard11.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_hard12.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_hard13.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_hard14.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_hard15.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_hard16.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_hard17.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_hard2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_hard3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_hard4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_hard5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_hard6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_hard7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_hard8.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_hard9.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_soft1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_soft10.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_soft11.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_soft12.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_soft2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_soft3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_soft4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_soft5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_soft6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_soft7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_soft8.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Short/sfx_exp_short_soft9.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Shortest/sfx_exp_shortest_hard1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Shortest/sfx_exp_shortest_hard10.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Shortest/sfx_exp_shortest_hard2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Shortest/sfx_exp_shortest_hard3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Shortest/sfx_exp_shortest_hard4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Shortest/sfx_exp_shortest_hard5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Shortest/sfx_exp_shortest_hard6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Shortest/sfx_exp_shortest_hard7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Shortest/sfx_exp_shortest_hard8.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Shortest/sfx_exp_shortest_hard9.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Shortest/sfx_exp_shortest_soft1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Shortest/sfx_exp_shortest_soft2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Shortest/sfx_exp_shortest_soft3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Shortest/sfx_exp_shortest_soft4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Shortest/sfx_exp_shortest_soft5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Shortest/sfx_exp_shortest_soft6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Shortest/sfx_exp_shortest_soft7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Shortest/sfx_exp_shortest_soft8.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Shortest/sfx_exp_shortest_soft9.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Various/sfx_exp_various1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Various/sfx_exp_various2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Various/sfx_exp_various3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Various/sfx_exp_various4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Various/sfx_exp_various5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Various/sfx_exp_various6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Explosions/Various/sfx_exp_various7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Alarms/Alarms/sfx_alarm_loop1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Alarms/Alarms/sfx_alarm_loop2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Alarms/Alarms/sfx_alarm_loop3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Alarms/Alarms/sfx_alarm_loop4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Alarms/Alarms/sfx_alarm_loop5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Alarms/Alarms/sfx_alarm_loop6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Alarms/Alarms/sfx_alarm_loop7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Alarms/Alarms/sfx_alarm_loop8.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Alarms/Low health Alarms/sfx_lowhealth_alarmloop1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Alarms/Low health Alarms/sfx_lowhealth_alarmloop2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Alarms/Low health Alarms/sfx_lowhealth_alarmloop3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Alarms/Low health Alarms/sfx_lowhealth_alarmloop4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Alarms/Low health Alarms/sfx_lowhealth_alarmloop5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Alarms/Low health Alarms/sfx_lowhealth_alarmloop6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Alarms/Low health Alarms/sfx_lowhealth_alarmloop7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Buttons/sfx_sounds_button1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Buttons/sfx_sounds_button10.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Buttons/sfx_sounds_button11.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Buttons/sfx_sounds_button12.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Buttons/sfx_sounds_button13.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Buttons/sfx_sounds_button14.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Buttons/sfx_sounds_button2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Buttons/sfx_sounds_button3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Buttons/sfx_sounds_button4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Buttons/sfx_sounds_button5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Buttons/sfx_sounds_button6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Buttons/sfx_sounds_button7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Buttons/sfx_sounds_button8.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Buttons/sfx_sounds_button9.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Coins/sfx_coin_cluster1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Coins/sfx_coin_cluster2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Coins/sfx_coin_cluster3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Coins/sfx_coin_cluster4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Coins/sfx_coin_cluster5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Coins/sfx_coin_cluster6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Coins/sfx_coin_cluster7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Coins/sfx_coin_cluster8.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Coins/sfx_coin_cluster9.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Coins/sfx_coin_double1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Coins/sfx_coin_double2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Coins/sfx_coin_double3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Coins/sfx_coin_double4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Coins/sfx_coin_double5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Coins/sfx_coin_double6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Coins/sfx_coin_double7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Coins/sfx_coin_single1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Coins/sfx_coin_single2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Coins/sfx_coin_single3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Coins/sfx_coin_single4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Coins/sfx_coin_single5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Coins/sfx_coin_single6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Fanfares/sfx_sounds_fanfare1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Fanfares/sfx_sounds_fanfare2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Fanfares/sfx_sounds_fanfare3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/High Pitched Sounds/sfx_sounds_high1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/High Pitched Sounds/sfx_sounds_high2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/High Pitched Sounds/sfx_sounds_high3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/High Pitched Sounds/sfx_sounds_high4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/High Pitched Sounds/sfx_sounds_high5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/High Pitched Sounds/sfx_sounds_high6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/High Pitched Sounds/sfx_sounds_high7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Impacts/sfx_sounds_impact1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Impacts/sfx_sounds_impact10.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Impacts/sfx_sounds_impact11.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Impacts/sfx_sounds_impact12.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Impacts/sfx_sounds_impact13.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Impacts/sfx_sounds_impact14.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Impacts/sfx_sounds_impact15.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Impacts/sfx_sounds_impact2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Impacts/sfx_sounds_impact3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Impacts/sfx_sounds_impact4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Impacts/sfx_sounds_impact5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Impacts/sfx_sounds_impact6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Impacts/sfx_sounds_impact7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Impacts/sfx_sounds_impact8.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Impacts/sfx_sounds_impact9.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction10.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction11.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction12.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction13.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction14.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction15.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction16.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction17.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction18.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction19.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction20.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction21.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction22.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction23.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction24.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction25.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction26.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction8.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Interactions/sfx_sounds_interaction9.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Menu Sounds/sfx_menu_move1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Menu Sounds/sfx_menu_move2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Menu Sounds/sfx_menu_move3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Menu Sounds/sfx_menu_move4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Menu Sounds/sfx_menu_move5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Menu Sounds/sfx_menu_select1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Menu Sounds/sfx_menu_select2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Menu Sounds/sfx_menu_select3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Menu Sounds/sfx_menu_select4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Menu Sounds/sfx_menu_select5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Negative Sounds/sfx_sounds_damage1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Negative Sounds/sfx_sounds_damage2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Negative Sounds/sfx_sounds_damage3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Negative Sounds/sfx_sounds_error1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Negative Sounds/sfx_sounds_error10.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Negative Sounds/sfx_sounds_error11.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Negative Sounds/sfx_sounds_error12.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Negative Sounds/sfx_sounds_error13.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Negative Sounds/sfx_sounds_error14.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Negative Sounds/sfx_sounds_error15.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Negative Sounds/sfx_sounds_error2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Negative Sounds/sfx_sounds_error3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Negative Sounds/sfx_sounds_error4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Negative Sounds/sfx_sounds_error5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Negative Sounds/sfx_sounds_error6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Negative Sounds/sfx_sounds_error7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Negative Sounds/sfx_sounds_error8.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Negative Sounds/sfx_sounds_error9.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Negative Sounds/sfx_sounds_negative1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Negative Sounds/sfx_sounds_negative2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Neutral Sounds/sfx_sound_neutral1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Neutral Sounds/sfx_sound_neutral10.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Neutral Sounds/sfx_sound_neutral11.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Neutral Sounds/sfx_sound_neutral2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Neutral Sounds/sfx_sound_neutral3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Neutral Sounds/sfx_sound_neutral4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Neutral Sounds/sfx_sound_neutral5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Neutral Sounds/sfx_sound_neutral6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Neutral Sounds/sfx_sound_neutral7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Neutral Sounds/sfx_sound_neutral8.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Neutral Sounds/sfx_sound_neutral9.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Pause Sounds/sfx_sounds_pause1_in.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Pause Sounds/sfx_sounds_pause1_out.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Pause Sounds/sfx_sounds_pause2_in.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Pause Sounds/sfx_sounds_pause2_out.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Pause Sounds/sfx_sounds_pause3_in.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Pause Sounds/sfx_sounds_pause3_out.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Pause Sounds/sfx_sounds_pause4_in.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Pause Sounds/sfx_sounds_pause4_out.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Pause Sounds/sfx_sounds_pause5_in.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Pause Sounds/sfx_sounds_pause5_out.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Pause Sounds/sfx_sounds_pause6_in.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Pause Sounds/sfx_sounds_pause6_out.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Pause Sounds/sfx_sounds_pause7_in.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Pause Sounds/sfx_sounds_pause7_out.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Positive Sounds/sfx_sounds_powerup1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Positive Sounds/sfx_sounds_powerup10.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Positive Sounds/sfx_sounds_powerup11.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Positive Sounds/sfx_sounds_powerup12.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Positive Sounds/sfx_sounds_powerup13.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Positive Sounds/sfx_sounds_powerup14.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Positive Sounds/sfx_sounds_powerup15.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Positive Sounds/sfx_sounds_powerup16.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Positive Sounds/sfx_sounds_powerup17.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Positive Sounds/sfx_sounds_powerup18.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Positive Sounds/sfx_sounds_powerup2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Positive Sounds/sfx_sounds_powerup3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Positive Sounds/sfx_sounds_powerup4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Positive Sounds/sfx_sounds_powerup5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Positive Sounds/sfx_sounds_powerup6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Positive Sounds/sfx_sounds_powerup7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Positive Sounds/sfx_sounds_powerup8.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Positive Sounds/sfx_sounds_powerup9.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Simple Bleeps/sfx_sounds_Blip1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Simple Bleeps/sfx_sounds_Blip10.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Simple Bleeps/sfx_sounds_Blip11.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Simple Bleeps/sfx_sounds_Blip2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Simple Bleeps/sfx_sounds_Blip3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Simple Bleeps/sfx_sounds_Blip4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Simple Bleeps/sfx_sounds_Blip5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Simple Bleeps/sfx_sounds_Blip6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Simple Bleeps/sfx_sounds_Blip7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Simple Bleeps/sfx_sounds_Blip8.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Simple Bleeps/sfx_sounds_Blip9.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Simple Damage Sounds/sfx_damage_hit1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Simple Damage Sounds/sfx_damage_hit10.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Simple Damage Sounds/sfx_damage_hit2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Simple Damage Sounds/sfx_damage_hit3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Simple Damage Sounds/sfx_damage_hit4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Simple Damage Sounds/sfx_damage_hit5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Simple Damage Sounds/sfx_damage_hit6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Simple Damage Sounds/sfx_damage_hit7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Simple Damage Sounds/sfx_damage_hit8.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Simple Damage Sounds/sfx_damage_hit9.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Weird Sounds/sfx_sound_bling.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Weird Sounds/sfx_sound_depressurizing.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Weird Sounds/sfx_sound_mechanicalnoise1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Weird Sounds/sfx_sound_mechanicalnoise2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Weird Sounds/sfx_sound_mechanicalnoise3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Weird Sounds/sfx_sound_mechanicalnoise4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Weird Sounds/sfx_sound_mechanicalnoise5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Weird Sounds/sfx_sound_mechanicalnoise6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Weird Sounds/sfx_sound_nagger1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Weird Sounds/sfx_sound_nagger2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Weird Sounds/sfx_sound_noise.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Weird Sounds/sfx_sound_poweron.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Weird Sounds/sfx_sound_refereewhistle.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Weird Sounds/sfx_sound_shutdown1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Weird Sounds/sfx_sound_shutdown2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/General Sounds/Weird Sounds/sfx_sound_vaporizing.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/INFO.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Ladder/sfx_movement_ladder1a.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Ladder/sfx_movement_ladder1b.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Ladder/sfx_movement_ladder1loop.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Ladder/sfx_movement_ladder2a.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Ladder/sfx_movement_ladder2b.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Ladder/sfx_movement_ladder2loop.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Ladder/sfx_movement_ladder3a.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Ladder/sfx_movement_ladder3b.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Ladder/sfx_movement_ladder3loop.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Ladder/sfx_movement_ladder4a.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Ladder/sfx_movement_ladder4b.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Ladder/sfx_movement_ladder4loop.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Ladder/sfx_movement_ladder5a.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Ladder/sfx_movement_ladder5b.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Ladder/sfx_movement_ladder5loop.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Ladder/sfx_movement_ladder6a.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Ladder/sfx_movement_ladder6b.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Ladder/sfx_movement_ladder6loop.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Stairs/sfx_movement_stairs1a.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Stairs/sfx_movement_stairs1b.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Stairs/sfx_movement_stairs1loop.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Stairs/sfx_movement_stairs2a.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Stairs/sfx_movement_stairs2b.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Stairs/sfx_movement_stairs2loop.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Stairs/sfx_movement_stairs3a.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Stairs/sfx_movement_stairs3b.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Stairs/sfx_movement_stairs3loop.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Stairs/sfx_movement_stairs4a.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Stairs/sfx_movement_stairs4b.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Stairs/sfx_movement_stairs4loop.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Stairs/sfx_movement_stairs5a.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Stairs/sfx_movement_stairs5b.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Stairs/sfx_movement_stairs5loop.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Stairs/sfx_movement_stairs6a.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Stairs/sfx_movement_stairs6b.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Climbing Stairs/sfx_movement_stairs6loop.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling10.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling11.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling12.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling8.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling9.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Footsteps/sfx_movement_footsteps1a.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Footsteps/sfx_movement_footsteps1b.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Footsteps/sfx_movement_footsteps5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Footsteps/sfx_movement_footstepsloop3_fast.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Footsteps/sfx_movement_footstepsloop3_slow.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Footsteps/sfx_movement_footstepsloop4_fast.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Footsteps/sfx_movement_footstepsloop4_slow.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump10.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump10_landing.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump11.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump11_landing.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump12.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump12_landing.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump13.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump13_landing.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump14.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump14_landing.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump15.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump15_landing.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump16.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump16_landing.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump17.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump17_landing.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump18.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump18_landing.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump19.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump19_landing.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump20.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump8.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump9.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Jumping and Landing/sfx_movement_jump9_landing.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Opening Doors/sfx_movement_dooropen1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Opening Doors/sfx_movement_dooropen2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Opening Doors/sfx_movement_dooropen3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Opening Doors/sfx_movement_dooropen4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Portals and Transitions/sfx_movement_portal1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Portals and Transitions/sfx_movement_portal2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Portals and Transitions/sfx_movement_portal3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Portals and Transitions/sfx_movement_portal4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Portals and Transitions/sfx_movement_portal5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Portals and Transitions/sfx_movement_portal6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Vehicles/sfx_vehicle_breaks.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Vehicles/sfx_vehicle_carloop1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Vehicles/sfx_vehicle_carloop2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Vehicles/sfx_vehicle_engineloop.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Vehicles/sfx_vehicle_helicopterloop1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Vehicles/sfx_vehicle_helicopterloop2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Vehicles/sfx_vehicle_helicopterloop3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Vehicles/sfx_vehicle_helicopterloop4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Movement/Vehicles/sfx_vehicle_plainloop.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Cannon/sfx_wpn_cannon1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Cannon/sfx_wpn_cannon2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Cannon/sfx_wpn_cannon3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Cannon/sfx_wpn_cannon4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Cannon/sfx_wpn_cannon5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Cannon/sfx_wpn_cannon6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Grenade Whistles/sfx_wpn_grenadewhistle1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Grenade Whistles/sfx_wpn_grenadewhistle2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Grenade Whistles/sfx_wpn_missilelaunch.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Lasers/sfx_wpn_laser 10.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Lasers/sfx_wpn_laser1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Lasers/sfx_wpn_laser10.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Lasers/sfx_wpn_laser11.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Lasers/sfx_wpn_laser12.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Lasers/sfx_wpn_laser2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Lasers/sfx_wpn_laser3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Lasers/sfx_wpn_laser4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Lasers/sfx_wpn_laser5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Lasers/sfx_wpn_laser6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Lasers/sfx_wpn_laser7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Lasers/sfx_wpn_laser8.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Lasers/sfx_wpn_laser9.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Machinegun/sfx_wpn_machinegun_loop1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Machinegun/sfx_wpn_machinegun_loop2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Machinegun/sfx_wpn_machinegun_loop3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Machinegun/sfx_wpn_machinegun_loop4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Machinegun/sfx_wpn_machinegun_loop5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Machinegun/sfx_wpn_machinegun_loop6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Machinegun/sfx_wpn_machinegun_loop7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Machinegun/sfx_wpn_machinegun_loop8.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Machinegun/sfx_wpn_machinegun_loop9.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Melee/sfx_wpn_dagger.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Melee/sfx_wpn_punch1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Melee/sfx_wpn_punch2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Melee/sfx_wpn_punch3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Melee/sfx_wpn_punch4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Melee/sfx_wpn_sword1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Melee/sfx_wpn_sword2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Melee/sfx_wpn_sword3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Out of Ammo/sfx_wpn_noammo1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Out of Ammo/sfx_wpn_noammo2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Out of Ammo/sfx_wpn_noammo3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Out of Ammo/sfx_wpn_reload.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Shotgun/sfx_weapon_shotgun1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Shotgun/sfx_weapon_shotgun2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Shotgun/sfx_weapon_shotgun3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Single Shot Sounds/sfx_weapon_singleshot1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Single Shot Sounds/sfx_weapon_singleshot10.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Single Shot Sounds/sfx_weapon_singleshot11.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Single Shot Sounds/sfx_weapon_singleshot12.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Single Shot Sounds/sfx_weapon_singleshot13.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Single Shot Sounds/sfx_weapon_singleshot14.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Single Shot Sounds/sfx_weapon_singleshot15.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Single Shot Sounds/sfx_weapon_singleshot16.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Single Shot Sounds/sfx_weapon_singleshot17.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Single Shot Sounds/sfx_weapon_singleshot18.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Single Shot Sounds/sfx_weapon_singleshot19.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Single Shot Sounds/sfx_weapon_singleshot2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Single Shot Sounds/sfx_weapon_singleshot20.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Single Shot Sounds/sfx_weapon_singleshot21.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Single Shot Sounds/sfx_weapon_singleshot22.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Single Shot Sounds/sfx_weapon_singleshot3.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Single Shot Sounds/sfx_weapon_singleshot4.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Single Shot Sounds/sfx_weapon_singleshot5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Single Shot Sounds/sfx_weapon_singleshot6.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Single Shot Sounds/sfx_weapon_singleshot7.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Single Shot Sounds/sfx_weapon_singleshot8.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/The Essential Retro/Weapons/Single Shot Sounds/sfx_weapon_singleshot9.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/deathflash.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/fight.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/oldschool/BossIntro.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/oldschool/BossMain.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/oldschool/FTMs/Boss.ftm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/oldschool/FTMs/IntroJingle.ftm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/oldschool/FTMs/Map.ftm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/oldschool/FTMs/Mars.ftm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/oldschool/FTMs/Mercury.ftm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/oldschool/FTMs/Venus.ftm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/oldschool/FTMs/WarpJingle.ftm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/oldschool/FTMs/WinJingle.ftm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/oldschool/Intro Jingle.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/oldschool/Map (basic version).ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/oldschool/Map.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/oldschool/Mars.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/oldschool/Mercury.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/oldschool/Venus.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/oldschool/Warp Jingle.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/oldschool/Win Jingle.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/orbital_colossus.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/projects/MyVeryOwnDeadShip.mmpz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/projects/MyVeryOwnDeadShip.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/rock_breaking.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/single_and_multi_explosion.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/synthetic_explosion.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/the_field_of_dreams.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/soundeffects/through_space.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/sounds/sounds.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/sounds/sounds_interface.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/text/font.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/text/text.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/tiles-test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/tiles/tiles.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/tiles/tiles_interface.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/titlebar/README.MD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/titlebar/titlebar.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/titlebar/titlebar_interface.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abgabe/titlebar/titlebar_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bomberman_Lastenheft.odt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entwurf_UML_und_Begruendung.odt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entwurf_UML_und_Begruendung.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Planung.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projektuebersicht.odt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bomberman_Anleitung.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/colornames.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/installationsanleitung.txt" beforeDir="false" afterPath="$PROJECT_DIR$/doc/installationsanleitung.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_1.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_1.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +797,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/doc" />
       <recent name="$PROJECT_DIR$/tiles" />
       <recent name="$PROJECT_DIR$/levels" />
       <recent name="$PROJECT_DIR$/gameStats" />
@@ -117,7 +854,28 @@
       <option name="project" value="LOCAL" />
       <updated>1623151507060</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="mod4">
+      <created>1623153489687</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1623153489687</updated>
+    </task>
+    <task id="LOCAL-00008" summary="mod4">
+      <created>1623153507552</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1623153507552</updated>
+    </task>
+    <task id="LOCAL-00009" summary="mod4">
+      <created>1623154023686</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1623154023686</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
