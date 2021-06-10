@@ -36,71 +36,71 @@ func NewSound(nr uint8) Sound {
 	switch nr {
 	// Musik:
 	case ThroughSpace:
-		s.path = "soundeffects/through_space.ogg"
+		s.path = "data/soundeffects/through_space.ogg"
 	case TheFieldOfDreams:
-		s.path = "soundeffects/the_field_of_dreams.ogg"
+		s.path = "data/soundeffects/the_field_of_dreams.ogg"
 	case OrbitalColossus:
-		s.path = "soundeffects/orbital_colossus.ogg"
+		s.path = "data/soundeffects/orbital_colossus.ogg"
 	case Fight:
-		s.path = "soundeffects/fight.ogg"
+		s.path = "data/soundeffects/fight.ogg"
 	case JuhaniJunkalaTitle:
-		s.path = "soundeffects/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Title Screen.ogg"
+		s.path = "data/soundeffects/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Title Screen.ogg"
 	case JuhaniJunkalaLevel1:
-		s.path = "soundeffects/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Level 1.ogg"
+		s.path = "data/soundeffects/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Level 1.ogg"
 	case JuhaniJunkalaLevel2:
-		s.path = "soundeffects/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Level 2.ogg"
+		s.path = "data/soundeffects/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Level 2.ogg"
 	case JuhaniJunkalaLevel3:
-		s.path = "soundeffects/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Level 3.ogg"
+		s.path = "data/soundeffects/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Level 3.ogg"
 	case JuhaniJunkalaEnd:
-		s.path = "soundeffects/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Ending.ogg"
+		s.path = "data/soundeffects/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Ending.ogg"
 	case ObservingTheStar:
-		s.path = "soundeffects/ObservingTheStar/ObservingTheStar.ogg"
+		s.path = "data/soundeffects/ObservingTheStar/ObservingTheStar.ogg"
 	case MyVeryOwnDeadShip:
-		s.path = "soundeffects/projects/MyVeryOwnDeadShip.ogg"
+		s.path = "data/soundeffects/projects/MyVeryOwnDeadShip.ogg"
 
 	// Soundeffekte:
 	case Deathflash:
-		s.path = "soundeffects/deathflash.ogg"
+		s.path = "data/soundeffects/deathflash.ogg"
 	case Falling1:
-		s.path = "soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling1.ogg"
+		s.path = "data/soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling1.ogg"
 	case Falling2:
-		s.path = "soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling2.ogg"
+		s.path = "data/soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling2.ogg"
 	case Falling3:
-		s.path = "soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling3.ogg"
+		s.path = "data/soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling3.ogg"
 	case Falling4:
-		s.path = "soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling4.ogg"
+		s.path = "data/soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling4.ogg"
 	case Falling5:
-		s.path = "soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling5.ogg"
+		s.path = "data/soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling5.ogg"
 	case Falling6:
-		s.path = "soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling6.ogg"
+		s.path = "data/soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling6.ogg"
 	case Falling7:
-		s.path = "soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling7.ogg"
+		s.path = "data/soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling7.ogg"
 	case Falling8:
-		s.path = "soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling8.ogg"
+		s.path = "data/soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling8.ogg"
 	case Falling9:
-		s.path = "soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling9.ogg"
+		s.path = "data/soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling9.ogg"
 	case Falling10:
-		s.path = "soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling10.ogg"
+		s.path = "data/soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling10.ogg"
 	case Falling11:
-		s.path = "soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling11.ogg"
+		s.path = "data/soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling11.ogg"
 	case Falling12:
-		s.path = "soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling12.ogg"
+		s.path = "data/soundeffects/The Essential Retro/Movement/Falling Sounds/sfx_sounds_falling12.ogg"
 	case Alarm1:
-		s.path = "soundeffects/The Essential Retro/General Sounds/Alarms/Alarms/sfx_alarm_loop1.ogg"
+		s.path = "data/soundeffects/The Essential Retro/General Sounds/Alarms/Alarms/sfx_alarm_loop1.ogg"
 	case Alarm2:
-		s.path = "soundeffects/The Essential Retro/General Sounds/Alarms/Alarms/sfx_alarm_loop2.ogg"
+		s.path = "data/soundeffects/The Essential Retro/General Sounds/Alarms/Alarms/sfx_alarm_loop2.ogg"
 	case Alarm3:
-		s.path = "soundeffects/The Essential Retro/General Sounds/Alarms/Alarms/sfx_alarm_loop3.ogg"
+		s.path = "data/soundeffects/The Essential Retro/General Sounds/Alarms/Alarms/sfx_alarm_loop3.ogg"
 	case Alarm4:
-		s.path = "soundeffects/The Essential Retro/General Sounds/Alarms/Alarms/sfx_alarm_loop4.ogg"
+		s.path = "data/soundeffects/The Essential Retro/General Sounds/Alarms/Alarms/sfx_alarm_loop4.ogg"
 	case Alarm5:
-		s.path = "soundeffects/The Essential Retro/General Sounds/Alarms/Alarms/sfx_alarm_loop5.ogg"
+		s.path = "data/soundeffects/The Essential Retro/General Sounds/Alarms/Alarms/sfx_alarm_loop5.ogg"
 	case Alarm6:
-		s.path = "soundeffects/The Essential Retro/General Sounds/Alarms/Alarms/sfx_alarm_loop6.ogg"
+		s.path = "data/soundeffects/The Essential Retro/General Sounds/Alarms/Alarms/sfx_alarm_loop6.ogg"
 	case Alarm7:
-		s.path = "soundeffects/The Essential Retro/General Sounds/Alarms/Alarms/sfx_alarm_loop7.ogg"
+		s.path = "data/soundeffects/The Essential Retro/General Sounds/Alarms/Alarms/sfx_alarm_loop7.ogg"
 	case Alarm8:
-		s.path = "soundeffects/The Essential Retro/General Sounds/Alarms/Alarms/sfx_alarm_loop8.ogg"
+		s.path = "data/soundeffects/The Essential Retro/General Sounds/Alarms/Alarms/sfx_alarm_loop8.ogg"
 	}
 	return s
 }

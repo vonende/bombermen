@@ -72,7 +72,7 @@ func showIntro(win *pixelgl.Window) {
 	music = sounds.NewSound(ThroughSpace)
 	go music.PlaySound()
 
-	pic, err := loadPic("graphics/bomberman.png")
+	pic, err := loadPic("data/graphics/bomberman.png")
 	if err != nil {
 		panic(err)
 	}
@@ -139,18 +139,21 @@ func togglePics(win *pixelgl.Window, sprite1, sprite2 *pixel.Sprite, zoomFactor 
 
 func victory(win *pixelgl.Window) {
 	var pic2 pixel.Picture
-	pic1, err := loadPic("graphics/Screenshots/victory1.png")
+	pic1, err := loadPic("data/graphics/Screenshots/victory1.png")
 	if err != nil {
 		panic(err)
 	}
-	pic2, err = loadPic("graphics/Screenshots/victory2.png")
+	pic2, err = loadPic("data/graphics/Screenshots/victory2.png")
 	if err != nil {
 		panic(err)
 	}
 	sprite1 := pixel.NewSprite(pic1, pic1.Bounds())
 	sprite2 := pixel.NewSprite(pic2, pic2.Bounds())
+	win.SetBounds(pixel.R(0, 0, MaxWinSizeX, MaxWinSizeY))
+	win.SetMatrix(pixel.IM.Moved(win.Bounds().Center()))
 	win.Clear(colornames.Black)
 	win.SetSmooth(true)
+	win.Update()
 	// victory pic: zoom in
 	winSize := win.Bounds().Size()
 	picSize := pic1.Bounds().Size()
@@ -175,11 +178,11 @@ func gameOver(win *pixelgl.Window) {
 	win.SetMatrix(pixel.IM.Moved(win.Bounds().Center()))
 	win.Update()
 	var picGoOn pixel.Picture
-	picEnd, err := loadPic("graphics/Screenshots/gameOverEnd.png")
+	picEnd, err := loadPic("data/graphics/Screenshots/gameOverEnd.png")
 	if err != nil {
 		panic(err)
 	}
-	picGoOn, err = loadPic("graphics/Screenshots/gameOverGoOn.png")
+	picGoOn, err = loadPic("data/graphics/Screenshots/gameOverGoOn.png")
 	if err != nil {
 		panic(err)
 	}
@@ -873,27 +876,27 @@ func setMonster() {
 func loadLevel(nr uint8) string {
 	switch nr {
 	case 1:
-		return "./levels/stufe_1_level_1.txt"
+		return "../data/levels/stufe_1_level_1.txt"
 	case 2:
-		return "./levels/stufe_1_level_2.txt"
+		return "../data/levels/stufe_1_level_2.txt"
 	case 3:
-		return "./levels/stufe_1_level_3.txt"
+		return "../data/levels/stufe_1_level_3.txt"
 	case 4:
-		return "./levels/stufe_2_level_1.txt"
+		return "../data/levels/stufe_2_level_1.txt"
 	case 5:
-		return "./levels/stufe_2_level_2.txt"
+		return "../data/levels/stufe_2_level_2.txt"
 	case 6:
-		return "./levels/stufe_2_level_3.txt"
+		return "../data/levels/stufe_2_level_3.txt"
 	case 7:
-		return "./levels/stufe_3_level_1.txt"
+		return "../data/levels/stufe_3_level_1.txt"
 	case 8:
-		return "./levels/stufe_3_level_2.txt"
+		return "../data/levels/stufe_3_level_2.txt"
 	case 9:
-		return "./levels/stufe_3_level_3.txt"
+		return "../data/levels/stufe_3_level_3.txt"
 	case 10:
-		return "./levels/stufe_3_level_Boss.txt"
+		return "../data/levels/stufe_3_level_Boss.txt"
 	}
-	return "./levels/stufe_3_level_Boss.txt"
+	return "../data/levels/stufe_3_level_Boss.txt"
 }
 func sun() {
 	var levelCount uint8 = 1
@@ -951,6 +954,10 @@ func sun() {
 		if nextLevel {
 			music.FadeOut()
 			levelCount++
+			if levelCount == 11 {
+				victory(win)
+				break
+			}
 			nextLevel = false
 			win.SetMatrix(pixel.IM)
 			win.Clear(colornames.Black)

@@ -49,7 +49,7 @@ func Print(text string) *pixelgl.Canvas {
 }
 
 func init() {
-	file, err := os.Open("./text/font.png")
+	file, err := os.Open("../data/graphics/font.png")
 	if err != nil {
 		log.Fatal(err)
 	}

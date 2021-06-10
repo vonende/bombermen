@@ -235,9 +235,9 @@ func (a *data) setPermTiles() {
 
 func (a *data) drawPermTiles() {
 	var permSprite *pixel.Sprite
-	tilesPic, err := loadPicture("graphics/tiles.png")
+	tilesPic, err := loadPicture("data/graphics/tiles.png")
 	if err != nil {
-		tilesPic, err = loadPicture("../graphics/tiles.png") // for testing
+		tilesPic, err = loadPicture("../data/graphics/tiles.png") // for testing
 		if err != nil {
 			log.Fatal(err)
 		}
@@ -258,9 +258,9 @@ func (a *data) drawPermTiles() {
 
 func (a *data) drawWallsAndGround() { // baut Arena spaltenweise auf, beginnt unten links
 	var edgeLowLeft, wallLeft, edgeHiLeft, hiWall, edgeHiRight, wallRight, edgeLowRight, loWall, ground *pixel.Sprite
-	tilesPic, err := loadPicture("graphics/tiles.png")
+	tilesPic, err := loadPicture("data/graphics/tiles.png")
 	if err != nil {
-		tilesPic, err = loadPicture("../graphics/tiles.png") // for testing
+		tilesPic, err = loadPicture("../data/graphics/tiles.png") // for testing
 		if err != nil {
 			log.Fatal(err)
 		}

@@ -1406,9 +1406,9 @@ func (c *enhancedAnimation) Update() {
 }
 
 func init() {
-	file, err := os.Open("graphics/characters.png")
+	file, err := os.Open("data/graphics/characters.png")
 	if err != nil {
-		file, err = os.Open("../graphics/characters.png") // for testing
+		file, err = os.Open("../data/graphics/characters.png") // for testing
 		if err != nil {
 			log.Fatal(err)
 		}
@@ -1423,9 +1423,9 @@ func init() {
 	}
 	CharacterImage = pixel.PictureDataFromImage(img)
 
-	file, err = os.Open("graphics/animations.png")
+	file, err = os.Open("data/graphics/animations.png")
 	if err != nil {
-		file, err = os.Open("../graphics/animations.png")
+		file, err = os.Open("../data/graphics/animations.png")
 		if err != nil {
 			log.Fatal(err)
 		}
