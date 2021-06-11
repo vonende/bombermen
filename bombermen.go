@@ -52,7 +52,7 @@ var pitchWidth int
 var pitchHeight int
 var itemBatch *pixel.Batch
 var nextLevel bool
-var playerName string
+var playerName []byte
 
 var clearingNeeded = false
 
@@ -144,7 +144,13 @@ func saveScore() {
 	file.Write((*((*[4]byte)(ptr)))[:4])
 
 	// Schreibe Name des Spielers in die Datei (20 Byte)
-	file.Write(([]byte(playerName))[:20])
+	for i := 0; i < 20; i++ {
+		if i < len(playerName) {
+			file.Write(playerName[i : i+1])
+		} else {
+			file.Write([]byte{0x20})
+		}
+	}
 	file.Close()
 }
 
@@ -1072,8 +1078,7 @@ func sun() {
 
 	showIntro(win) // INTROOOOOOOOOOOOOOOO
 
-	playerName = readName()
-
+	playerName = []byte(readName())
 	font := txt.NewFont(txt.Fire)
 	txt1 := txt.NewText(font, fmt.Sprintf(" Level %2d ", levelCount))
 	txt2 := txt.NewText(font, "Press Space")
