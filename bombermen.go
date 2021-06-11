@@ -159,7 +159,7 @@ func readName() string {
 	var pos uint8
 	font := txt.NewFont(txt.Fire)
 	text1 := txt.NewText(font, "Type your name please:")
-	text2 := txt.NewTextL(font, 20)
+	text2 := txt.NewText(font, "")
 	for !win.Pressed(pixelgl.KeyEnter) {
 		win.Update()
 		win.Clear(colornames.Black)
@@ -1079,9 +1079,10 @@ func sun() {
 	showIntro(win) // INTROOOOOOOOOOOOOOOO
 
 	playerName = []byte(readName())
-	font := txt.NewFont(txt.Fire)
-	txt1 := txt.NewText(font, fmt.Sprintf(" Level %2d ", levelCount))
-	txt2 := txt.NewText(font, "Press Space")
+	firefont := txt.NewFont(txt.Fire)
+	bluefont := txt.NewFont(txt.Blue)
+	txt1 := txt.NewText(firefont, fmt.Sprintf(" Level %2d ", levelCount))
+	txt2 := txt.NewText(bluefont, "Press Space")
 
 	win.Clear(colornames.Black)
 	txt1.Draw(win, pixel.IM.Scaled(pixel.ZV, 3))
@@ -1300,10 +1301,9 @@ func sun() {
 	h := float64(80)
 	txt1.Draw(win, pixel.IM.Scaled(pixel.ZV, 2).Moved(pixel.V(0, win.Bounds().H()/2-h)))
 	h += 100
-	txt1 = txt.NewTextL(font, 46)
 	for _, val := range topTen(readScore()) {
-		txt1.Set(fmt.Sprintf("%2d %6d %s %s", val.level, val.points, val.name, val.time))
-		txt1.Draw(win, pixel.IM.Moved(pixel.V(txt1.Bounds().W()/2-win.Bounds().W()/2+30, win.Bounds().H()/2-h)))
+		txt2.Set(fmt.Sprintf("%2d %6d %s %s", val.level, val.points, val.name, val.time))
+		txt2.Draw(win, pixel.IM.Moved(pixel.V(txt2.Bounds().W()/2-win.Bounds().W()/2+30, win.Bounds().H()/2-h)))
 		h += 40
 	}
 	for !win.Pressed(pixelgl.KeySpace) && !win.Pressed(pixelgl.KeyEscape) {

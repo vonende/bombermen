@@ -2,15 +2,13 @@ package text
 
 import (
 	"github.com/faiface/pixel"
-	"github.com/faiface/pixel/pixelgl"
-	"image/color"
 	"image/png"
 	"os"
 )
 
 /****************************************************************************************
 
-Simples Paket zur Ausgabe von Retro-Text über ein Canvas-Element.
+Simples Paket zur Ausgabe von Retro-Text.
 
 _________________________________
 < Implementiert von Rayk von Ende >
@@ -23,58 +21,51 @@ _________________________________
 
 ****************************************************************************************/
 
-const Fire = 1
+const (
+	Fire = 1
+	Pink = 2
+	Blue = 3
+)
 
 type textStruct struct {
-	maxLength int
-	font      *pixel.PictureData
-	canvas    *pixelgl.Canvas
-	sprite    *pixel.Sprite
-	text      []byte
+	font   *pixel.PictureData
+	batch  *pixel.Batch
+	sprite *pixel.Sprite
+	text   []byte
 }
 
 func NewFont(t uint8) *pixel.PictureData {
 	switch t {
 	case Fire:
 		return loadFont("./data/graphics/firefont.png")
+	case Pink:
+		return loadFont("./data/graphics/pinkfont.png")
+	case Blue:
+		return loadFont("./data/graphics/bluefont.png")
 	default:
 		return loadFont("./data/graphics/firefont.png")
 	}
 }
 
-func NewTextL(font *pixel.PictureData, maxLength int) *textStruct {
-	ts := new(textStruct)
-	ts.maxLength = maxLength
-	if font == nil {
-		panic("Es wurde kein Font-Image gefunden (Nil-Pointer)!")
-	}
-	ts.font = font
-	ts.text = make([]byte, maxLength)
-	ts.canvas = pixelgl.NewCanvas(pixel.R(0, 0, float64(16*maxLength), 32))
-	ts.sprite = pixel.NewSprite(font, pixel.R(0, 0, 16, 32))
-	return ts
-}
-
 func NewText(font *pixel.PictureData, s string) *textStruct {
 	ts := new(textStruct)
 	ts.text = stringToBytes(s)
-	ts.maxLength = len(ts.text)
 	if font == nil {
 		panic("Es wurde kein Font-Image gefunden (Nil-Pointer)!")
 	}
 	ts.font = font
-	ts.canvas = pixelgl.NewCanvas(pixel.R(0, 0, float64(16*ts.maxLength), 32))
 	ts.sprite = pixel.NewSprite(font, pixel.R(0, 0, 16, 32))
-	ts.canvas.Clear(color.Transparent)
-	for i, val := range ts.text {
-		ts.sprite.Set(ts.font, getRectForChar(val))
-		ts.sprite.Draw(ts.canvas, pixel.IM.Moved(pixel.V(8, 16)).Moved(pixel.V(float64(i*16), 0)))
-	}
+	ts.batch = pixel.NewBatch(&pixel.TrianglesData{}, font)
 	return ts
 }
 
 func (ts *textStruct) Draw(target pixel.Target, matrix pixel.Matrix) {
-	ts.canvas.Draw(target, pixel.IM.Moved(ts.canvas.Bounds().Center().Sub(ts.Bounds().Center())).Chained(matrix))
+	ts.batch.Clear()
+	for i, val := range ts.text {
+		ts.sprite.Set(ts.font, getRectForChar(val))
+		ts.sprite.Draw(ts.batch, pixel.IM.Moved(ts.Bounds().Center().Scaled(-1)).Moved(pixel.V(8, 16)).Moved(pixel.V(float64(i*16), 0)).Chained(matrix))
+	}
+	ts.batch.Draw(target)
 }
 
 func (ts *textStruct) Bounds() pixel.Rect {
@@ -93,21 +84,9 @@ func stringToBytes(s string) []byte {
 	return b
 }
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func (ts *textStruct) Set(text string) {
-	b := stringToBytes(text)
-	ts.text = b[0:min(len(b), ts.maxLength)]
-	ts.canvas.Clear(color.Transparent)
-	for i, val := range ts.text {
-		ts.sprite.Set(ts.font, getRectForChar(val))
-		ts.sprite.Draw(ts.canvas, pixel.IM.Moved(pixel.V(8, 16)).Moved(pixel.V(float64(i*16), 0)))
-	}
+	ts.text = stringToBytes(text)
+	ts.batch.Clear()
 }
 
 // Vor.: -
