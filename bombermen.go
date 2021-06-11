@@ -16,6 +16,7 @@ package main
  *******************************************************************/
 
 import (
+	"fmt"
 	"github.com/faiface/pixel"
 	"github.com/faiface/pixel/imdraw"
 	"github.com/faiface/pixel/pixelgl"
@@ -32,8 +33,8 @@ import (
 	"image/png"
 	"math/rand"
 	"os"
-	"strconv"
 	"time"
+	"unsafe"
 )
 
 var bombs []tiles.Bombe
@@ -42,6 +43,7 @@ var tb titlebars.Titlebar
 var lv gameStats.GameStat
 var music sounds.Sound
 var levelDef levels.Level
+var levelCount uint8 = 1
 var tempAniSlice [][]interface{} // [Animation][Matrix]
 var monster []characters.Enemy
 var wB characters.Player
@@ -50,8 +52,151 @@ var pitchWidth int
 var pitchHeight int
 var itemBatch *pixel.Batch
 var nextLevel bool
+var playerName string
 
 var clearingNeeded = false
+
+type highscore struct {
+	level  uint8
+	points uint32
+	name   [20]byte
+	time   [10]byte
+}
+
+func readScore() (hs []*highscore) {
+	var t time.Time
+	var i int
+	var ptr unsafe.Pointer
+	hs = make([]*highscore, 0)
+
+	lC := make([]byte, 1)  // levelCount
+	tt := make([]byte, 15) // time.Time
+	p := make([]byte, 4)   // points
+	n := make([]byte, 20)  // playerName
+
+	file, err := os.Open("./data/highscore")
+	if err != nil {
+		println("Highscore-Datei konnte nicht zum Lesen geöffnet werden.")
+		panic(err)
+	}
+	for {
+		i, err = file.Read(lC)
+		if i != 1 || err != nil {
+			break
+		}
+		i, err = file.Read(tt)
+		if i != 15 || err != nil {
+			break
+		}
+		i, err = file.Read(p)
+		if i != 4 || err != nil {
+			break
+		}
+		i, err = file.Read(n)
+		if i != 20 || err != nil {
+			break
+		}
+
+		s := new(highscore)
+
+		s.level = lC[0]
+
+		ptr = unsafe.Pointer(&p[0])
+		s.points = *(*uint32)(ptr)
+
+		ptr = unsafe.Pointer(&n[0])
+		s.name = *(*[20]byte)(ptr)
+
+		t.UnmarshalBinary(tt)
+		ti := []byte(t.String()[:19])
+		ptr = unsafe.Pointer(&ti[0])
+		s.time = *(*[10]byte)(ptr)
+
+		hs = append(hs, s)
+	}
+	return hs
+}
+
+// saveScore sichert die Infos für den Highscore.
+// Ein Eintrag ist 28 Byte lang.
+func saveScore() {
+	var ptr unsafe.Pointer
+	file, err := os.OpenFile("./data/highscore", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	if err != nil {
+		println("Highscore-Datei konnte nicht zum Schreiben geöffnet werden.")
+		panic(err)
+	}
+
+	// Schreibe Levelnummer in die Datei (1 Byte)
+	ptr = unsafe.Pointer(&levelCount)
+	file.Write((*((*[1]byte)(ptr)))[:1])
+
+	// Schreibe aktuelle Systemzeit in die Datei (15 Byte)
+	now, err := time.Now().MarshalBinary()
+	if err != nil {
+		panic(err)
+	}
+	file.Write(now)
+
+	// Schreibe Punktestand in die Datei (4 Byte)
+	points := wB.GetPoints()
+	ptr = unsafe.Pointer(&points)
+	file.Write((*((*[4]byte)(ptr)))[:4])
+
+	// Schreibe Name des Spielers in die Datei (20 Byte)
+	file.Write(([]byte(playerName))[:20])
+	file.Close()
+}
+
+func readName() string {
+	var name string
+	var pos uint8
+	font := txt.NewFont(txt.Fire)
+	text1 := txt.NewText(font, "Type your name please:")
+	text2 := txt.NewTextL(font, 20)
+	for !win.Pressed(pixelgl.KeyEnter) {
+		win.Update()
+		win.Clear(colornames.Black)
+		text1.Draw(win, pixel.IM.Moved(pixel.V(0, text1.Bounds().H())).Scaled(pixel.ZV, 2))
+		text2.Draw(win, pixel.IM.Moved(pixel.V(0, -text2.Bounds().H())).Scaled(pixel.ZV, 2))
+		if len(win.Typed()) > 0 && pos < 20 {
+			if (win.Typed())[0] >= 0x20 && (win.Typed())[0] <= 0x7E {
+				name = name + string((win.Typed())[0])
+				pos++
+			}
+		}
+		if win.JustPressed(pixelgl.KeyBackspace) {
+			if pos != 0 {
+				pos--
+				name = name[0:pos]
+			}
+		}
+		text2.Set(name)
+	}
+	return name
+}
+
+func topTen(list []*highscore) []*highscore {
+	for i := 0; i < len(list); i++ {
+		if i == 10 {
+			break
+		}
+		for j := i; j < len(list); j++ {
+			if list[j].level > list[i].level {
+				list[i], list[j] = list[j], list[i]
+			} else if list[j].level == list[i].level {
+				if list[j].points > list[i].points {
+					list[i], list[j] = list[j], list[i]
+				}
+			}
+		}
+	}
+	if len(list) < 10 {
+		return list
+	} else {
+		return list[:10]
+	}
+}
 
 func loadPic(path string) (pixel.Picture, error) {
 	file, err := os.Open(path)
@@ -101,7 +246,7 @@ func showIntro(win *pixelgl.Window) {
 
 	time.Sleep(time.Second)
 
-	txt.Print("Press Space").Draw(win, pixel.IM.Scaled(pixel.ZV, zoom*6).Moved(pixel.V(0, -win.Bounds().H()/4)))
+	txt.NewText(txt.NewFont(txt.Fire), "Press Space").Draw(win, pixel.IM.Scaled(pixel.ZV, zoom*6).Moved(pixel.V(0, -win.Bounds().H()/4)))
 
 	for !win.Pressed(pixelgl.KeySpace) {
 		win.Update()
@@ -126,6 +271,7 @@ func fadeOut(win *pixelgl.Window) {
 		time.Sleep(20 * time.Millisecond)
 	}
 }
+
 func togglePics(win *pixelgl.Window, sprite1, sprite2 *pixel.Sprite, zoomFactor float64) {
 	for {
 		sprite1.Draw(win, pixel.IM.Scaled(pixel.ZV, zoomFactor))
@@ -170,6 +316,7 @@ func victory(win *pixelgl.Window) {
 	}
 	win.SetSmooth(false)
 }
+
 func gameOver(win *pixelgl.Window) {
 	music.StopSound()
 	music = sounds.NewSound(JuhaniJunkalaEnd)
@@ -899,7 +1046,6 @@ func loadLevel(nr uint8) string {
 	return "./data/levels/stufe_3_level_Boss.txt"
 }
 func sun() {
-	var levelCount uint8 = 1
 	levelDef = levels.NewLevel(loadLevel(levelCount))
 	pitchWidth, pitchHeight = levelDef.GetBounds()
 	var zoomFactor float64
@@ -926,8 +1072,14 @@ func sun() {
 
 	showIntro(win) // INTROOOOOOOOOOOOOOOO
 
+	playerName = readName()
+
+	font := txt.NewFont(txt.Fire)
+	txt1 := txt.NewText(font, fmt.Sprintf(" Level %2d ", levelCount))
+	txt2 := txt.NewText(font, "Press Space")
+
 	win.Clear(colornames.Black)
-	txt.Print("Let's Play").Draw(win, pixel.IM.Scaled(pixel.V(0, 0), 3))
+	txt1.Draw(win, pixel.IM.Scaled(pixel.ZV, 3))
 	win.Update()
 	time.Sleep(time.Second * 2)
 
@@ -961,7 +1113,9 @@ func sun() {
 			nextLevel = false
 			win.SetMatrix(pixel.IM)
 			win.Clear(colornames.Black)
-			txt.Print("Level "+strconv.Itoa(int(levelCount))).Draw(win, pixel.IM.Scaled(pixel.V(0, 0), 3).Moved(win.Bounds().Center()))
+			txt1.Set(fmt.Sprintf("Level %2d", levelCount))
+			txt1.Draw(win, pixel.IM.Scaled(pixel.V(0, 0), 3).Moved(win.Bounds().Center()))
+			txt2.Draw(win, pixel.IM.Scaled(pixel.V(0, 0), 2).Moved(win.Bounds().Center().Sub(pixel.V(0, 80))))
 			for !win.Pressed(pixelgl.KeySpace) {
 				win.Update()
 				time.Sleep(time.Millisecond)
@@ -1131,13 +1285,27 @@ func sun() {
 
 		}
 		tb.StopCountdown()
-		//if rand.Intn(2) == 1 {
-		//	victory(win)
-		//}else{
 		if !nextLevel {
-			gameOver(win)
+			saveScore()
+			gameOver(win) // Setzt entsprechend der Userauswahl die Variable continu auf true oder false
 		}
 	}
+	win.Clear(colornames.Black)
+	txt1.Set("Highscores")
+	h := float64(80)
+	txt1.Draw(win, pixel.IM.Scaled(pixel.ZV, 2).Moved(pixel.V(0, win.Bounds().H()/2-h)))
+	h += 100
+	txt1 = txt.NewTextL(font, 46)
+	for _, val := range topTen(readScore()) {
+		txt1.Set(fmt.Sprintf("%2d %6d %s %s", val.level, val.points, val.name, val.time))
+		txt1.Draw(win, pixel.IM.Moved(pixel.V(txt1.Bounds().W()/2-win.Bounds().W()/2+30, win.Bounds().H()/2-h)))
+		h += 40
+	}
+	for !win.Pressed(pixelgl.KeySpace) && !win.Pressed(pixelgl.KeyEscape) {
+		win.Update()
+		time.Sleep(100 * time.Millisecond)
+	}
+
 }
 
 func main() {
