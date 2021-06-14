@@ -1303,7 +1303,7 @@ func sun() {
 	h += 100
 	for _, val := range topTen(readScore()) {
 		txt2.Set(fmt.Sprintf("%2d %6d %s %s", val.level, val.points, val.name, val.time))
-		txt2.Draw(win, pixel.IM.Moved(pixel.V(txt2.Bounds().W()/2-win.Bounds().W()/2+30, win.Bounds().H()/2-h)))
+		txt2.Draw(win, pixel.IM.Moved(pixel.V(txt2.Bounds().W()/2-win.Bounds().W()/2+150, win.Bounds().H()/2-h)))
 		h += 40
 	}
 	for !win.Pressed(pixelgl.KeySpace) && !win.Pressed(pixelgl.KeyEscape) {
