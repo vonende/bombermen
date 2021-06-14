@@ -1,16 +1,20 @@
 # Software-Project Bombermen
 
-## Aktuelle Verzeichnisstruktur:
+## Verzeichnisstruktur:
 
-- graphics: Spritesheets und andere Grafiken
-- characters: Interface mit den Bomberman- und Enemyeigenschaften
 - animations: Interface für grafische Darstellung und Animation von Objekten der Spielwelt
-- sounds: Interface für Geräusche und Musik
-- soundeffects: Soundeffekte und Musik im OGG-Format mit Samplerate von 41 kHz
+- arenas: Stellt Spielarenen zur Verfügung
+- characters: Interface mit den Bomberman- und Enemyeigenschaften
 - constants: Definition von allgemeinen Konstanten zur Identifizierung von Enemies, Bombermen, Items etc.
-- arena: ADO arena
+- data: Grafikdateien, Sounddateien, Highscoreliste
+- doc: Dokumentation des Projekts
+- gameStats: Interface zur Verwaltung des Spielfeldes
+- levels: Interface, welches die Leveldefinitionen lädt  
+- sounds: Interface für Geräusche und Musik
+- text: Interface für die Darstellung von grafischem Text
+- tiles: Definition von Items und zerstörbaren Hindernissen  
+- titlebars: Interface für die Darstellung einer Spielstandsanzeige
 
 
+bombermen.go: Main-Loop des Spiels.
 
-bomberman_rayk.go:  Testfile für Grafik, Sound etc.
-main.go: Steuerung eines Bomberman mit Pfeiltasten vor dem Hintergrund von Level2
