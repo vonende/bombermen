@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/gopxl/pixel/v2"
-	"github.com/gopxl/pixel/v2/opengl"
+	"github.com/gopxl/pixel/v2/backends/opengl"
 	"github.com/vonende/bombermen/animations"
 	. "github.com/vonende/bombermen/constants"
 	"github.com/vonende/bombermen/levels"
@@ -44,9 +44,9 @@ func run() {
 
 	itemBatch := pixel.NewBatch(&pixel.TrianglesData{}, animations.ItemImage)
 
-	for !win.Closed() && !win.Pressed(opengl.KeyEscape) {
+	for !win.Closed() && !win.Pressed(pixel.KeyEscape) {
 		itemBatch.Clear()
-		if win.JustPressed(opengl.MouseButton1) { // Destroy
+		if win.JustPressed(pixel.MouseButton1) { // Destroy
 			xx, yy := lv.A().GetFieldCoord(win.MousePosition().Scaled(1 / zoomFactor))
 			fmt.Println(xx, yy)
 			if !lv.IsTile(xx, yy) {
@@ -56,7 +56,7 @@ func run() {
 			}
 
 		}
-		if win.JustPressed(opengl.MouseButton2) { // Info & Collect
+		if win.JustPressed(pixel.MouseButton2) { // Info & Collect
 			xx, yy := lv.A().GetFieldCoord(win.MousePosition().Scaled(1 / zoomFactor))
 			fmt.Println("Ist zerstörbares Teil: ", lv.IsDestroyableTile(xx, yy))
 			fmt.Println("Ist unzerstörbarTeil: ", lv.IsUndestroyableTile(xx, yy))
@@ -68,7 +68,7 @@ func run() {
 				fmt.Println("Item gesammelt?: ", d, e)
 			}
 		}
-		if win.JustPressed(opengl.KeySpace) {
+		if win.JustPressed(pixel.KeySpace) {
 			lv.Reset()
 		}
 

@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/gopxl/pixel/v2"
-	"github.com/gopxl/pixel/v2/imdraw"
-	"github.com/gopxl/pixel/v2/opengl"
+	"github.com/gopxl/pixel/v2/backends/opengl"
+	"github.com/gopxl/pixel/v2/ext/imdraw"
 	"github.com/vonende/bombermen/animations"
 	. "github.com/vonende/bombermen/constants"
 	"github.com/vonende/bombermen/sounds"

@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/gopxl/pixel/v2"
-	"github.com/gopxl/pixel/v2/opengl"
+	"github.com/gopxl/pixel/v2/backends/opengl"
 	. "github.com/vonende/bombermen/constants"
 )
 

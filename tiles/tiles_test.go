@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/gopxl/pixel/v2"
-	"github.com/gopxl/pixel/v2/opengl"
+	"github.com/gopxl/pixel/v2/backends/opengl"
 	"github.com/vonende/bombermen/animations"
 	"github.com/vonende/bombermen/characters"
 	. "github.com/vonende/bombermen/constants"
@@ -38,7 +38,7 @@ func run() {
 
 	i := NewItem(SkullItem, pixel.V(0, 0))
 	fmt.Println(i.GetType())
-	for !win.Closed() && !win.Pressed(opengl.KeyEscape) {
+	for !win.Closed() && !win.Pressed(pixel.KeyEscape) {
 		itemBatch.Clear()
 		if mod%2 == 0 {
 			for _, w := range ti {
@@ -58,7 +58,7 @@ func run() {
 				w.SetDestroyable(true)
 			}
 		}
-		if win.JustPressed(opengl.MouseButton1) { // Move Tile
+		if win.JustPressed(pixel.MouseButton1) { // Move Tile
 			t := NewTile(House, win.MousePosition())
 			ti = append(ti, t)
 			fmt.Println("Zeichenmatrix: ", t.GetMatrix())
@@ -66,13 +66,13 @@ func run() {
 			fmt.Println("Ist sichtbar: ", t.IsVisible())
 			fmt.Println(t.GetType())
 			mod++
-		} else if win.JustPressed(opengl.MouseButton2) { // Move Item
+		} else if win.JustPressed(pixel.MouseButton2) { // Move Item
 			i := NewItem(SkullItem, win.MousePosition()) //.Scaled(1/3))
 			it = append(it, i)
 			mod++
 		}
 
-		if win.JustPressed(opengl.KeySpace) { // stats
+		if win.JustPressed(pixel.KeySpace) { // stats
 			for _, w := range ti {
 				fmt.Println("Tile Animation sichtbar? ", w.IsVisible())
 			}
@@ -88,7 +88,7 @@ func run() {
 			}
 		}
 
-		if win.JustPressed(opengl.KeyB) {
+		if win.JustPressed(pixel.KeyB) {
 			b := NewBomb(wB, win.MousePosition())
 			b.SetPower(1)
 			bs = append(bs, b)

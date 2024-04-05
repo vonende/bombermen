@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"github.com/gopxl/pixel/v2"
-	"github.com/gopxl/pixel/v2/opengl"
-	"github.com/gopxl/pixel/v2/text"
+	"github.com/gopxl/pixel/v2/backends/opengl"
+	"github.com/gopxl/pixel/v2/ext/text"
 	. "github.com/vonende/bombermen/constants"
 	"golang.org/x/image/font/basicfont"
 )

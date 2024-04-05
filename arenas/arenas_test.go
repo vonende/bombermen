@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/gopxl/pixel/v2"
-	"github.com/gopxl/pixel/v2/opengl"
-	"github.com/gopxl/pixel/v2/text"
+	"github.com/gopxl/pixel/v2/backends/opengl"
+	"github.com/gopxl/pixel/v2/ext/text"
 	"golang.org/x/image/font/basicfont"
 )
 
@@ -63,7 +63,7 @@ func cun() {
 	win.SetMatrix(pixel.IM.Scaled(pixel.V(0, 0), 3))
 
 	var i int
-	for !win.Closed() && !win.Pressed(opengl.KeyEscape) {
+	for !win.Closed() && !win.Pressed(pixel.KeyEscape) {
 		if i%3 == 0 {
 			arena = NewArena(0, 13, 11)
 			arena.GetCanvas().Draw(win, *(arena.GetMatrix()))
@@ -77,7 +77,7 @@ func cun() {
 			arena.GetCanvas().Draw(win, *(arena.GetMatrix()))
 			win.Update()
 		}
-		if win.Pressed(opengl.KeyEnter) {
+		if win.Pressed(pixel.KeyEnter) {
 			i++
 			time.Sleep(1e8)
 		}

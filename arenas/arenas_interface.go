@@ -2,7 +2,7 @@ package arenas
 
 import (
 	"github.com/gopxl/pixel/v2"
-	"github.com/gopxl/pixel/v2/opengl"
+	"github.com/gopxl/pixel/v2/backends/opengl"
 )
 
 // NewArena(width,heigth float64) *data

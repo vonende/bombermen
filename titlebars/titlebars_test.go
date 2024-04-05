@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/gopxl/pixel/v2"
-	"github.com/gopxl/pixel/v2/opengl"
+	"github.com/gopxl/pixel/v2/backends/opengl"
 )
 
 func run() {
@@ -38,7 +38,7 @@ func run() {
 	for {
 		bar.Draw(win)
 		win.Update()
-		if win.Pressed(opengl.KeyEscape) {
+		if win.Pressed(pixel.KeyEscape) {
 			break
 		}
 	}

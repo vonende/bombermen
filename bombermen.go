@@ -24,8 +24,8 @@ import (
 	"unsafe"
 
 	"github.com/gopxl/pixel/v2"
-	"github.com/gopxl/pixel/v2/imdraw"
-	"github.com/gopxl/pixel/v2/opengl"
+	"github.com/gopxl/pixel/v2/backends/opengl"
+	"github.com/gopxl/pixel/v2/ext/imdraw"
 	"github.com/vonende/bombermen/animations"
 	"github.com/vonende/bombermen/characters"
 	. "github.com/vonende/bombermen/constants"
@@ -161,7 +161,7 @@ func readName() string {
 	font := txt.NewFont(txt.Fire)
 	text1 := txt.NewText(font, "Type your name please:")
 	text2 := txt.NewText(font, "")
-	for !win.Pressed(opengl.KeyEnter) {
+	for !win.Pressed(pixel.KeyEnter) {
 		win.Update()
 		win.Clear(colornames.Black)
 		text1.Draw(win, pixel.IM.Moved(pixel.V(0, text1.Bounds().H())).Scaled(pixel.ZV, 2))
@@ -172,7 +172,7 @@ func readName() string {
 				pos++
 			}
 		}
-		if win.JustPressed(opengl.KeyBackspace) {
+		if win.JustPressed(pixel.KeyBackspace) {
 			if pos != 0 {
 				pos--
 				name = name[0:pos]
@@ -255,7 +255,7 @@ func showIntro(win *opengl.Window) {
 
 	txt.NewText(txt.NewFont(txt.Fire), "Press Space").Draw(win, pixel.IM.Scaled(pixel.ZV, zoom*6).Moved(pixel.V(0, -win.Bounds().H()/4)))
 
-	for !win.Pressed(opengl.KeySpace) {
+	for !win.Pressed(pixel.KeySpace) {
 		win.Update()
 		time.Sleep(100 * time.Millisecond)
 	}
@@ -317,7 +317,7 @@ func victory(win *opengl.Window) {
 	}
 	// victory pic: toggle
 	go togglePics(win, sprite1, sprite2, zoomFactor)
-	for !win.Closed() && !win.Pressed(opengl.KeyEscape) {
+	for !win.Closed() && !win.Pressed(pixel.KeyEscape) {
 		time.Sleep(1e5)
 		win.Update()
 	}
@@ -349,13 +349,13 @@ func gameOver(win *opengl.Window) {
 	zoomFactor := winSize.Len() / picSize.Len()
 	for i := float64(0); i <= zoomFactor; i = i + 0.01 {
 		//spriteGoOn.Draw(win, pixel.IM.Scaled(pixel.ZV, i))
-		if win.Pressed(opengl.KeyDown) {
+		if win.Pressed(pixel.KeyDown) {
 			spriteEnd.Draw(win, pixel.IM.Scaled(pixel.ZV, i))
 			continu = false
-		} else if win.Pressed(opengl.KeyUp) {
+		} else if win.Pressed(pixel.KeyUp) {
 			spriteGoOn.Draw(win, pixel.IM.Scaled(pixel.ZV, i))
 			continu = true
-		} else if win.Pressed(opengl.KeyEnter) {
+		} else if win.Pressed(pixel.KeyEnter) {
 			win.SetSmooth(false)
 			music.StopSound()
 			return
@@ -369,14 +369,14 @@ func gameOver(win *opengl.Window) {
 		win.Update()
 	}
 	// game over picGoOn: toggle
-	for !win.Closed() && !win.Pressed(opengl.KeyEscape) {
-		if win.Pressed(opengl.KeyDown) {
+	for !win.Closed() && !win.Pressed(pixel.KeyEscape) {
+		if win.Pressed(pixel.KeyDown) {
 			spriteEnd.Draw(win, pixel.IM.Scaled(pixel.ZV, zoomFactor))
 			continu = false
-		} else if win.Pressed(opengl.KeyUp) {
+		} else if win.Pressed(pixel.KeyUp) {
 			spriteGoOn.Draw(win, pixel.IM.Scaled(pixel.ZV, zoomFactor))
 			continu = true
-		} else if win.Pressed(opengl.KeyEnter) {
+		} else if win.Pressed(pixel.KeyEnter) {
 			win.SetSmooth(false)
 			music.StopSound()
 			return
@@ -1124,7 +1124,7 @@ func sun() {
 			txt1.Set(fmt.Sprintf("Level %2d", levelCount))
 			txt1.Draw(win, pixel.IM.Scaled(pixel.V(0, 0), 3).Moved(win.Bounds().Center()))
 			txt2.Draw(win, pixel.IM.Scaled(pixel.V(0, 0), 2).Moved(win.Bounds().Center().Sub(pixel.V(0, 80))))
-			for !win.Pressed(opengl.KeySpace) {
+			for !win.Pressed(pixel.KeySpace) {
 				win.Update()
 				time.Sleep(time.Millisecond)
 			}
@@ -1170,7 +1170,7 @@ func sun() {
 		last := time.Now()
 		dt := time.Since(last).Seconds()
 
-		for !win.Closed() && !win.Pressed(opengl.KeyEscape) {
+		for !win.Closed() && !win.Pressed(pixel.KeyEscape) {
 			if nextLevel {
 				continu = true
 				break
@@ -1195,27 +1195,27 @@ func sun() {
 			dt = time.Since(last).Seconds()
 			last = time.Now()
 
-			if win.Pressed(opengl.KeyLeft) && wB.Ani().GetView() != Dead {
+			if win.Pressed(pixel.KeyLeft) && wB.Ani().GetView() != Dead {
 				wB.SetDirection(Left)
 				moveCharacter(wB, dt)
 				keypressed = true
 			}
-			if win.Pressed(opengl.KeyRight) && wB.Ani().GetView() != Dead {
+			if win.Pressed(pixel.KeyRight) && wB.Ani().GetView() != Dead {
 				wB.SetDirection(Right)
 				moveCharacter(wB, dt)
 				keypressed = true
 			}
-			if win.Pressed(opengl.KeyUp) && wB.Ani().GetView() != Dead {
+			if win.Pressed(pixel.KeyUp) && wB.Ani().GetView() != Dead {
 				wB.SetDirection(Up)
 				moveCharacter(wB, dt)
 				keypressed = true
 			}
-			if win.Pressed(opengl.KeyDown) && wB.Ani().GetView() != Dead {
+			if win.Pressed(pixel.KeyDown) && wB.Ani().GetView() != Dead {
 				wB.SetDirection(Down)
 				moveCharacter(wB, dt)
 				keypressed = true
 			}
-			if win.Pressed(opengl.KeyX) && wB.Ani().GetView() != Dead && wB.HasRemote() {
+			if win.Pressed(pixel.KeyX) && wB.Ani().GetView() != Dead && wB.HasRemote() {
 				for _, bom := range bombs {
 					bom.SetTimeStamp(time.Now())
 				}
@@ -1226,7 +1226,7 @@ func sun() {
 				wB.Ani().SetView(Stay)
 			}
 
-			if win.JustPressed(opengl.KeySpace) && wB.GetBombs() < wB.GetMaxBombs() {
+			if win.JustPressed(pixel.KeySpace) && wB.GetBombs() < wB.GetMaxBombs() {
 				x, y := lv.A().GetFieldCoord(wB.GetPosBox().Center())
 				b, _ := isThereABomb(x, y)
 				c := lv.IsTile(x, y)
@@ -1308,7 +1308,7 @@ func sun() {
 		txt2.Draw(win, pixel.IM.Moved(pixel.V(txt2.Bounds().W()/2-win.Bounds().W()/2+150, win.Bounds().H()/2-h)))
 		h += 40
 	}
-	for !win.Pressed(opengl.KeySpace) && !win.Pressed(opengl.KeyEscape) {
+	for !win.Pressed(pixel.KeySpace) && !win.Pressed(pixel.KeyEscape) {
 		win.Update()
 		time.Sleep(100 * time.Millisecond)
 	}
