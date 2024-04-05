@@ -6,20 +6,20 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gopxl/pixel"
-	"github.com/gopxl/pixel/pixelgl"
-	"github.com/gopxl/pixel/text"
+	"github.com/gopxl/pixel/v2"
+	"github.com/gopxl/pixel/v2/opengl"
+	"github.com/gopxl/pixel/v2/text"
 	. "github.com/vonende/bombermen/constants"
 	"golang.org/x/image/font/basicfont"
 )
 
 func run() {
-	wincfg := pixelgl.WindowConfig{
+	wincfg := opengl.WindowConfig{
 		Title:  "Character Test",
 		Bounds: pixel.R(-640, -480, 640, 480),
 		VSync:  true,
 	}
-	win, err := pixelgl.NewWindow(wincfg)
+	win, err := opengl.NewWindow(wincfg)
 	if err != nil {
 		panic(err)
 	}
@@ -90,5 +90,5 @@ func run() {
 }
 
 func TestMain(*testing.M) {
-	pixelgl.Run(run)
+	opengl.Run(run)
 }

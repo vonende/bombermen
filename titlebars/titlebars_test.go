@@ -3,18 +3,18 @@ package titlebars
 import (
 	"testing"
 
-	"github.com/gopxl/pixel"
-	"github.com/gopxl/pixel/pixelgl"
+	"github.com/gopxl/pixel/v2"
+	"github.com/gopxl/pixel/v2/opengl"
 )
 
 func run() {
-	wincfg := pixelgl.WindowConfig{
+	wincfg := opengl.WindowConfig{
 		Title:  "Titlebar Test",
 		Bounds: pixel.R(0, 0, 1024, 768),
 		VSync:  true,
 	}
 
-	win, err := pixelgl.NewWindow(wincfg)
+	win, err := opengl.NewWindow(wincfg)
 	if err != nil {
 		panic(err)
 	}
@@ -38,12 +38,12 @@ func run() {
 	for {
 		bar.Draw(win)
 		win.Update()
-		if win.Pressed(pixelgl.KeyEscape) {
+		if win.Pressed(opengl.KeyEscape) {
 			break
 		}
 	}
 }
 
 func TestMain(*testing.M) {
-	pixelgl.Run(run)
+	opengl.Run(run)
 }

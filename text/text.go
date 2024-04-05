@@ -4,7 +4,7 @@ import (
 	"image/png"
 	"os"
 
-	"github.com/gopxl/pixel"
+	"github.com/gopxl/pixel/v2"
 )
 
 /****************************************************************************************

@@ -7,8 +7,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/gopxl/pixel"
-	"github.com/gopxl/pixel/pixelgl"
+	"github.com/gopxl/pixel/v2"
+	"github.com/gopxl/pixel/v2/opengl"
 	. "github.com/vonende/bombermen/constants"
 )
 
@@ -55,7 +55,7 @@ type enhancedAnimation struct {
 }
 type explosionAnimation struct {
 	batch      *pixel.Batch
-	canvas     *pixelgl.Canvas
+	canvas     *opengl.Canvas
 	count      int8          // Nummer des zuletzt gezeichneten Sprites der Animationssequenz beginnend bei 0
 	delta      int8          // count wird um delta in der Animation geändert
 	dPower     uint8         // Explosionsausdehnung nach unten
@@ -1037,7 +1037,7 @@ func NewExplosion(l, r, u, d uint8) Animation {
 	b.rPower = r
 	b.uPower = u
 	b.dPower = d
-	b.canvas = pixelgl.NewCanvas(pixel.R(0, 0, 16*float64(r+l+1), 16*float64(u+d+1)))
+	b.canvas = opengl.NewCanvas(pixel.R(0, 0, 16*float64(r+l+1), 16*float64(u+d+1)))
 	b.sprite = pixel.NewSprite(b.canvas, b.canvas.Bounds())
 	b.batch = pixel.NewBatch(&pixel.TrianglesData{}, ItemImage)
 	b.delta = 1

@@ -1,7 +1,7 @@
 package titlebars
 
 import (
-	"github.com/gopxl/pixel"
+	"github.com/gopxl/pixel/v2"
 )
 
 /*

@@ -5,7 +5,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/gopxl/pixel"
+	"github.com/gopxl/pixel/v2"
 	"github.com/vonende/bombermen/arenas"
 	. "github.com/vonende/bombermen/constants"
 	"github.com/vonende/bombermen/levels"

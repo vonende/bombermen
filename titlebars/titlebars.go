@@ -5,9 +5,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/gopxl/pixel"
-	"github.com/gopxl/pixel/imdraw"
-	"github.com/gopxl/pixel/pixelgl"
+	"github.com/gopxl/pixel/v2"
+	"github.com/gopxl/pixel/v2/imdraw"
+	"github.com/gopxl/pixel/v2/opengl"
 	"github.com/vonende/bombermen/animations"
 	. "github.com/vonende/bombermen/constants"
 	"github.com/vonende/bombermen/sounds"
@@ -20,12 +20,12 @@ const (
 )
 
 type titlebarStruct struct {
-	background     *imdraw.IMDraw  // Oranges Rechteck als Hintergrund
-	batch          *pixel.Batch    // Batch für schnelles Zeichnen
-	blackBox       pixel.Rect      // Kästchen für abgelaufene Zeit
-	canvas         *pixelgl.Canvas // Leinwand für die Anzeige
-	clock          pixel.Rect      // Rechteck der Uhr im itemImage
-	command        chan uint8      // Sendet Befehle an den Manager-Prozess
+	background     *imdraw.IMDraw // Oranges Rechteck als Hintergrund
+	batch          *pixel.Batch   // Batch für schnelles Zeichnen
+	blackBox       pixel.Rect     // Kästchen für abgelaufene Zeit
+	canvas         *opengl.Canvas // Leinwand für die Anzeige
+	clock          pixel.Rect     // Rechteck der Uhr im itemImage
+	command        chan uint8     // Sendet Befehle an den Manager-Prozess
 	managerStarted bool
 	heads          [4]pixel.Rect  // Rechtecke der Bombermenköpfe im itemImage
 	life           [4]*uint8      // Pointer zu den Variablen der Bombermenleben
@@ -47,7 +47,7 @@ type titlebarStruct struct {
 func New(width uint16) Titlebar {
 	t := new(titlebarStruct)
 	t.width = float64(width & 0xFFF8)
-	t.canvas = pixelgl.NewCanvas(pixel.R(0, 0, t.width, 32))
+	t.canvas = opengl.NewCanvas(pixel.R(0, 0, t.width, 32))
 	t.matrix = pixel.IM
 	t.batch = pixel.NewBatch(&pixel.TrianglesData{}, animations.ItemImage)
 	t.sprite = pixel.NewSprite(animations.ItemImage, animations.ItemImage.Bounds())
@@ -91,7 +91,7 @@ func New(width uint16) Titlebar {
 
 func (t *titlebarStruct) Resize(width uint16) {
 	t.width = float64(width & 0xFFF8)
-	t.canvas = pixelgl.NewCanvas(pixel.R(0, 0, t.width, 32))
+	t.canvas = opengl.NewCanvas(pixel.R(0, 0, t.width, 32))
 	t.background.Push(t.canvas.Bounds().Min)
 	t.background.Push(t.canvas.Bounds().Max)
 	t.background.Rectangle(0)

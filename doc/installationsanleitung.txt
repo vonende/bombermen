@@ -22,7 +22,7 @@ Installationsanleitung
 	go get github.com/gopxl/pixel
 	go get -u github.com/gopxl/beep
 	go get github.com/gopxl/pixel/imdraw
-	go get github.com/gopxl/pixel/pixelgl
+	go get github.com/gopxl/pixel/opengl
 	go get -u golang.org/x/image/...
 	go get github.com/gopxl/glhf
 	go get -u -tags=gles2 github.com/go-gl/glfw/v3.3/glfw

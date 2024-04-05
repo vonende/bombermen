@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/gopxl/pixel"
-	"github.com/gopxl/pixel/pixelgl"
+	"github.com/gopxl/pixel/v2"
+	"github.com/gopxl/pixel/v2/opengl"
 	"github.com/vonende/bombermen/animations"
 	. "github.com/vonende/bombermen/constants"
 	"github.com/vonende/bombermen/levels"
@@ -24,12 +24,12 @@ func run() {
 	var winSizeY = zoomFactor * (float64(pitchHeight+1)*TileSize + 32)
 	//var err error
 
-	wincfg := pixelgl.WindowConfig{
+	wincfg := opengl.WindowConfig{
 		Title:  "GameStat Test",
 		Bounds: pixel.R(0, 0, winSizeX, winSizeY),
 		VSync:  true,
 	}
-	win, err := pixelgl.NewWindow(wincfg)
+	win, err := opengl.NewWindow(wincfg)
 	if err != nil {
 		panic(err)
 	}
@@ -44,9 +44,9 @@ func run() {
 
 	itemBatch := pixel.NewBatch(&pixel.TrianglesData{}, animations.ItemImage)
 
-	for !win.Closed() && !win.Pressed(pixelgl.KeyEscape) {
+	for !win.Closed() && !win.Pressed(opengl.KeyEscape) {
 		itemBatch.Clear()
-		if win.JustPressed(pixelgl.MouseButton1) { // Destroy
+		if win.JustPressed(opengl.MouseButton1) { // Destroy
 			xx, yy := lv.A().GetFieldCoord(win.MousePosition().Scaled(1 / zoomFactor))
 			fmt.Println(xx, yy)
 			if !lv.IsTile(xx, yy) {
@@ -56,7 +56,7 @@ func run() {
 			}
 
 		}
-		if win.JustPressed(pixelgl.MouseButton2) { // Info & Collect
+		if win.JustPressed(opengl.MouseButton2) { // Info & Collect
 			xx, yy := lv.A().GetFieldCoord(win.MousePosition().Scaled(1 / zoomFactor))
 			fmt.Println("Ist zerstörbares Teil: ", lv.IsDestroyableTile(xx, yy))
 			fmt.Println("Ist unzerstörbarTeil: ", lv.IsUndestroyableTile(xx, yy))
@@ -68,7 +68,7 @@ func run() {
 				fmt.Println("Item gesammelt?: ", d, e)
 			}
 		}
-		if win.JustPressed(pixelgl.KeySpace) {
+		if win.JustPressed(opengl.KeySpace) {
 			lv.Reset()
 		}
 
@@ -83,5 +83,5 @@ func run() {
 }
 
 func TestMain(*testing.M) {
-	pixelgl.Run(run)
+	opengl.Run(run)
 }

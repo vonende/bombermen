@@ -5,21 +5,21 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gopxl/pixel"
-	"github.com/gopxl/pixel/pixelgl"
-	"github.com/gopxl/pixel/text"
+	"github.com/gopxl/pixel/v2"
+	"github.com/gopxl/pixel/v2/opengl"
+	"github.com/gopxl/pixel/v2/text"
 	"golang.org/x/image/font/basicfont"
 )
 
 func cun() {
 	const winWidth, winHeight, zoomFactor = 1024, 768, 3
-	wincfg := pixelgl.WindowConfig{
+	wincfg := opengl.WindowConfig{
 		Title:  "Arena Test",
 		Bounds: pixel.R(0, 0, winWidth, winHeight),
 		VSync:  true,
 	}
 
-	win, err := pixelgl.NewWindow(wincfg)
+	win, err := opengl.NewWindow(wincfg)
 	if err != nil {
 		panic(err)
 	}
@@ -63,7 +63,7 @@ func cun() {
 	win.SetMatrix(pixel.IM.Scaled(pixel.V(0, 0), 3))
 
 	var i int
-	for !win.Closed() && !win.Pressed(pixelgl.KeyEscape) {
+	for !win.Closed() && !win.Pressed(opengl.KeyEscape) {
 		if i%3 == 0 {
 			arena = NewArena(0, 13, 11)
 			arena.GetCanvas().Draw(win, *(arena.GetMatrix()))
@@ -77,7 +77,7 @@ func cun() {
 			arena.GetCanvas().Draw(win, *(arena.GetMatrix()))
 			win.Update()
 		}
-		if win.Pressed(pixelgl.KeyEnter) {
+		if win.Pressed(opengl.KeyEnter) {
 			i++
 			time.Sleep(1e8)
 		}
@@ -87,9 +87,9 @@ func cun() {
 }
 
 func TestMain(*testing.M) {
-	pixelgl.Run(cun)
+	opengl.Run(cun)
 }
 
 //func main() {
-//	pixelgl.Run(cun)
+//	opengl.Run(cun)
 //}

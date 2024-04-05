@@ -1,7 +1,7 @@
 package gameStats
 
 import (
-	"github.com/gopxl/pixel"
+	"github.com/gopxl/pixel/v2"
 	"github.com/vonende/bombermen/arenas"
 )
 

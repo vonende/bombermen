@@ -3,7 +3,7 @@ package tiles
 import (
 	"time"
 
-	"github.com/gopxl/pixel"
+	"github.com/gopxl/pixel/v2"
 	"github.com/vonende/bombermen/animations"
 	"github.com/vonende/bombermen/characters"
 	. "github.com/vonende/bombermen/constants"

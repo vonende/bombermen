@@ -7,13 +7,13 @@ import (
 	"math"
 	"os"
 
-	"github.com/gopxl/pixel"
-	"github.com/gopxl/pixel/pixelgl"
+	"github.com/gopxl/pixel/v2"
+	"github.com/gopxl/pixel/v2/opengl"
 	. "github.com/vonende/bombermen/constants"
 )
 
 type data struct {
-	canvas    *pixelgl.Canvas
+	canvas    *opengl.Canvas
 	lowerLeft pixel.Vec // linke untere Spielfeldecke für korrekte Positionsbestimmung
 	matrix    pixel.Matrix
 	passably  []bool // Slice showing passability for each tile
@@ -47,13 +47,13 @@ func NewArena(typ, width, height int) *data {
 		}
 	*/
 	a.matrix = pixel.IM.Moved(pixel.V((float64(width)*TileSize+WallWidth)/2-TileSize/4, (float64(height)*TileSize+WallHeight)/2-TileSize/2))
-	a.canvas = pixelgl.NewCanvas(pixel.R(-2*TileSize, -2*TileSize, float64(width)*TileSize+WallWidth+TileSize/2, float64(height)*TileSize+WallHeight))
+	a.canvas = opengl.NewCanvas(pixel.R(-2*TileSize, -2*TileSize, float64(width)*TileSize+WallWidth+TileSize/2, float64(height)*TileSize+WallHeight))
 	a.drawWallsAndGround()
 	a.drawPermTiles()
 	return a
 }
 
-func (a *data) GetCanvas() *pixelgl.Canvas {
+func (a *data) GetCanvas() *opengl.Canvas {
 	return a.canvas
 }
 func (a *data) GetFieldCoord(v pixel.Vec) (x, y int) {

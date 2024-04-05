@@ -1,8 +1,8 @@
 package arenas
 
 import (
-	"github.com/gopxl/pixel"
-	"github.com/gopxl/pixel/pixelgl"
+	"github.com/gopxl/pixel/v2"
+	"github.com/gopxl/pixel/v2/opengl"
 )
 
 // NewArena(width,heigth float64) *data
@@ -17,7 +17,7 @@ type Arena interface {
 	//Vor.: /
 	//Erg.: Die grafische Darstellung des Spielfelds inklusive Umrandung, Untergrund, permanenten und
 	//      zertörbaren Mauern ist geliefert.
-	GetCanvas() *pixelgl.Canvas
+	GetCanvas() *opengl.Canvas
 
 	//Vor.: /
 	//Erg.: Die Koordinaten des Feldes, in dem sich der Punkt v befindet, sind geliefert.

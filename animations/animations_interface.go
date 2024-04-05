@@ -1,6 +1,6 @@
 package animations
 
-import "github.com/gopxl/pixel"
+import "github.com/gopxl/pixel/v2"
 
 /*
 
