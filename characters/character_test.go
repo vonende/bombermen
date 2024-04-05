@@ -2,14 +2,15 @@ package characters
 
 import (
 	"fmt"
-	"github.com/faiface/pixel"
-	"github.com/faiface/pixel/pixelgl"
-	"github.com/faiface/pixel/text"
-	. "github.com/vonende/bombermen/constants"
-	"golang.org/x/image/font/basicfont"
 	"image/color"
 	"testing"
 	"time"
+
+	"github.com/gopxl/pixel"
+	"github.com/gopxl/pixel/pixelgl"
+	"github.com/gopxl/pixel/text"
+	. "github.com/vonende/bombermen/constants"
+	"golang.org/x/image/font/basicfont"
 )
 
 func run() {

@@ -2,14 +2,15 @@ package tiles
 
 import (
 	"fmt"
-	"github.com/faiface/pixel"
-	"github.com/faiface/pixel/pixelgl"
+	"testing"
+	"time"
+
+	"github.com/gopxl/pixel"
+	"github.com/gopxl/pixel/pixelgl"
 	"github.com/vonende/bombermen/animations"
 	"github.com/vonende/bombermen/characters"
 	. "github.com/vonende/bombermen/constants"
 	"golang.org/x/image/colornames"
-	"testing"
-	"time"
 )
 
 func run() {

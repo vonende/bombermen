@@ -1,7 +1,7 @@
 package titlebars
 
 import (
-	"github.com/faiface/pixel"
+	"github.com/gopxl/pixel"
 )
 
 /*

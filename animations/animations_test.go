@@ -1,12 +1,13 @@
 package animations
 
 import (
-	"github.com/faiface/pixel"
-	"github.com/faiface/pixel/pixelgl"
-	. "github.com/vonende/bombermen/constants"
 	"image/color"
 	"testing"
 	"time"
+
+	"github.com/gopxl/pixel"
+	"github.com/gopxl/pixel/pixelgl"
+	. "github.com/vonende/bombermen/constants"
 )
 
 func run() {

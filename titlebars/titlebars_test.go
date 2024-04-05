@@ -1,9 +1,10 @@
 package titlebars
 
 import (
-	"github.com/faiface/pixel"
-	"github.com/faiface/pixel/pixelgl"
 	"testing"
+
+	"github.com/gopxl/pixel"
+	"github.com/gopxl/pixel/pixelgl"
 )
 
 func run() {

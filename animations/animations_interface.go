@@ -1,6 +1,6 @@
 package animations
 
-import "github.com/faiface/pixel"
+import "github.com/gopxl/pixel"
 
 /*
 

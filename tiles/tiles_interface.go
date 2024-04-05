@@ -1,10 +1,11 @@
 package tiles
 
 import (
-	"github.com/faiface/pixel"
+	"time"
+
+	"github.com/gopxl/pixel"
 	"github.com/vonende/bombermen/animations"
 	"github.com/vonende/bombermen/characters"
-	"time"
 )
 
 /*	Vor.: "constant" muss ein gültiger Bezeichner für ein Item sein

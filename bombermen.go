@@ -17,9 +17,15 @@ package main
 
 import (
 	"fmt"
-	"github.com/faiface/pixel"
-	"github.com/faiface/pixel/imdraw"
-	"github.com/faiface/pixel/pixelgl"
+	"image/png"
+	"math/rand"
+	"os"
+	"time"
+	"unsafe"
+
+	"github.com/gopxl/pixel"
+	"github.com/gopxl/pixel/imdraw"
+	"github.com/gopxl/pixel/pixelgl"
 	"github.com/vonende/bombermen/animations"
 	"github.com/vonende/bombermen/characters"
 	. "github.com/vonende/bombermen/constants"
@@ -30,11 +36,6 @@ import (
 	"github.com/vonende/bombermen/tiles"
 	"github.com/vonende/bombermen/titlebars"
 	"golang.org/x/image/colornames"
-	"image/png"
-	"math/rand"
-	"os"
-	"time"
-	"unsafe"
 )
 
 var bombs []tiles.Bombe
@@ -421,9 +422,9 @@ func killPlayer(bm characters.Player) {
 
 // Vor: ...
 // Eff: Ist der Countdown der Bombe abgelaufen passiert folgendes:
-//     		- Eine neue Explosionsanimation ist erstellt und an die Position der ehemaligen bombe gesetzt.
-//      	- Es ertönt der Explosionssound.
-//      Ist der Countdown nicht abgelaufen, passiert nichts.
+//   - Eine neue Explosionsanimation ist erstellt und an die Position der ehemaligen bombe gesetzt.
+//   - Es ertönt der Explosionssound.
+//     Ist der Countdown nicht abgelaufen, passiert nichts.
 func checkForExplosions() {
 
 	for _, item := range bombs {
@@ -648,7 +649,8 @@ func checkForExplosions() {
 
 // Vor.:...
 // Eff.: Nicht explodierte Bomben aus dem Slice existingBombs werden in den
-//       Slice remainingBombs kopiert
+//
+//	Slice remainingBombs kopiert
 func removeExplodedBombs(existingBombs []tiles.Bombe) (remainingBombs []tiles.Bombe) {
 	j := 0
 	for i, bomb := range existingBombs {

@@ -1,7 +1,7 @@
 Installationsanleitung
 
 1. Requirements installieren: 
-	(Details unter: https://github.com/faiface/pixel#requirements)
+	(Details unter: https://github.com/gopxl/pixel#requirements)
 
 	->ubuntu: 
 	apt install libasound2-dev
@@ -19,12 +19,12 @@ Installationsanleitung
 	libXxf86vm-devel
 
 2. Pakete installieren:
-	go get github.com/faiface/pixel
-	go get -u github.com/faiface/beep
-	go get github.com/faiface/pixel/imdraw
-	go get github.com/faiface/pixel/pixelgl
+	go get github.com/gopxl/pixel
+	go get -u github.com/gopxl/beep
+	go get github.com/gopxl/pixel/imdraw
+	go get github.com/gopxl/pixel/pixelgl
 	go get -u golang.org/x/image/...
-	go get github.com/faiface/glhf
+	go get github.com/gopxl/glhf
 	go get -u -tags=gles2 github.com/go-gl/glfw/v3.3/glfw
 	go get github.com/hajimehoshi/oto
 	go get github.com/jfreymuth/oggvorbis

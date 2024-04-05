@@ -1,9 +1,10 @@
 package text
 
 import (
-	"github.com/faiface/pixel"
 	"image/png"
 	"os"
+
+	"github.com/gopxl/pixel"
 )
 
 /****************************************************************************************

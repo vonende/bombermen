@@ -2,12 +2,13 @@ package arenas
 
 import (
 	"fmt"
-	"github.com/faiface/pixel"
-	"github.com/faiface/pixel/pixelgl"
-	"github.com/faiface/pixel/text"
-	"golang.org/x/image/font/basicfont"
 	"testing"
 	"time"
+
+	"github.com/gopxl/pixel"
+	"github.com/gopxl/pixel/pixelgl"
+	"github.com/gopxl/pixel/text"
+	"golang.org/x/image/font/basicfont"
 )
 
 func cun() {

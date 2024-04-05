@@ -1,14 +1,15 @@
 package sounds
 
 import (
-	"github.com/faiface/beep"
-	"github.com/faiface/beep/effects"
-	"github.com/faiface/beep/speaker"
-	"github.com/faiface/beep/vorbis"
-	. "github.com/vonende/bombermen/constants"
 	"log"
 	"os"
 	"time"
+
+	"github.com/gopxl/beep"
+	"github.com/gopxl/beep/effects"
+	"github.com/gopxl/beep/speaker"
+	"github.com/gopxl/beep/vorbis"
+	. "github.com/vonende/bombermen/constants"
 )
 
 type snd struct {

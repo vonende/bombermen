@@ -1,8 +1,8 @@
 package arenas
 
 import (
-	"github.com/faiface/pixel"
-	"github.com/faiface/pixel/pixelgl"
+	"github.com/gopxl/pixel"
+	"github.com/gopxl/pixel/pixelgl"
 )
 
 // NewArena(width,heigth float64) *data

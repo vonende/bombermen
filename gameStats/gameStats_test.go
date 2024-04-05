@@ -2,12 +2,13 @@ package gameStats
 
 import (
 	"fmt"
-	"github.com/faiface/pixel"
-	"github.com/faiface/pixel/pixelgl"
+	"testing"
+
+	"github.com/gopxl/pixel"
+	"github.com/gopxl/pixel/pixelgl"
 	"github.com/vonende/bombermen/animations"
 	. "github.com/vonende/bombermen/constants"
 	"github.com/vonende/bombermen/levels"
-	"testing"
 )
 
 func run() {

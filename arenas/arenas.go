@@ -1,14 +1,15 @@
 package arenas
 
 import (
-	"github.com/faiface/pixel"
-	"github.com/faiface/pixel/pixelgl"
-	. "github.com/vonende/bombermen/constants"
 	"image"
 	_ "image/png"
 	"log"
 	"math"
 	"os"
+
+	"github.com/gopxl/pixel"
+	"github.com/gopxl/pixel/pixelgl"
+	. "github.com/vonende/bombermen/constants"
 )
 
 type data struct {

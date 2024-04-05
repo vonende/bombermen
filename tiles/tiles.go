@@ -1,11 +1,12 @@
 package tiles
 
 import (
-	"github.com/faiface/pixel"
+	"time"
+
+	"github.com/gopxl/pixel"
 	"github.com/vonende/bombermen/animations"
 	"github.com/vonende/bombermen/characters"
 	. "github.com/vonende/bombermen/constants"
-	"time"
 )
 
 /*

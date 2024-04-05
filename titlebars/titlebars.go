@@ -1,15 +1,16 @@
 package titlebars
 
 import (
-	"github.com/faiface/pixel"
-	"github.com/faiface/pixel/imdraw"
-	"github.com/faiface/pixel/pixelgl"
-	"github.com/vonende/bombermen/animations"
-	. "github.com/vonende/bombermen/constants"
-	"github.com/vonende/bombermen/sounds"
 	"image/color"
 	"sync"
 	"time"
+
+	"github.com/gopxl/pixel"
+	"github.com/gopxl/pixel/imdraw"
+	"github.com/gopxl/pixel/pixelgl"
+	"github.com/vonende/bombermen/animations"
+	. "github.com/vonende/bombermen/constants"
+	"github.com/vonende/bombermen/sounds"
 )
 
 const (

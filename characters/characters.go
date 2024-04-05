@@ -1,7 +1,7 @@
 package characters
 
 import (
-	"github.com/faiface/pixel"
+	"github.com/gopxl/pixel"
 	"github.com/vonende/bombermen/animations"
 	. "github.com/vonende/bombermen/constants"
 )

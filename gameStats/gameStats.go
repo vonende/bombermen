@@ -2,13 +2,14 @@ package gameStats
 
 import (
 	"fmt"
-	"github.com/faiface/pixel"
+	"math/rand"
+	"time"
+
+	"github.com/gopxl/pixel"
 	"github.com/vonende/bombermen/arenas"
 	. "github.com/vonende/bombermen/constants"
 	"github.com/vonende/bombermen/levels"
 	"github.com/vonende/bombermen/tiles"
-	"math/rand"
-	"time"
 )
 
 type gs struct {
